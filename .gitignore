@@ -1,6 +1,6 @@
 book
 node_modules
-src/thebe/
+src/thebe/*
 
 !src/thebe/thebe.css
 !src/thebe/thebe-core.min.js
