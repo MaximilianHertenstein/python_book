@@ -5,7 +5,10 @@
   "selector": "pre[data-executable]",
   "liteBuildDir": "thebe",
   "mountActivateWidget": true,
-  "mountStatusWidget": true
+  "mountStatusWidget": true,
+  codeMirrorConfig: {
+    theme: "abcdef"
+}
 }
 </script>
 
@@ -25,24 +28,14 @@
 /* Code cells */
 .thebe-input .CodeMirror {
   height:auto !important; 
-  background:inherit; 
 }
 
  .CodeMirror-gutters,
 .CodeMirror-linenumber { display:none }
 
-/* Syntax colors */
-.thebe-input .cm-keyword { color:#93c5fd; font-weight:600; }
-.thebe-input .cm-def { color:#fbbf24; }
-.thebe-input .cm-number { color:#fca5a5; }
-.thebe-input .cm-string { color:#86efac; }
-.thebe-input .cm-comment { color:#94a3b8; font-style:italic; }
-.thebe-input .cm-operator { color:#facc15; }
-.thebe-input .cm-builtin { color:#a5b4fc; }
-
 
 /* Cursor */
-.thebe-input .CodeMirror-cursor { border-left:2px solid #38bdf8; }
+{{!-- .thebe-input .CodeMirror-cursor { border-left:2px solid #38bdf8; } --}}
 
 /* Output */
 .thebe-output .jp-OutputArea-output {
