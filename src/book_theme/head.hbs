@@ -4,10 +4,13 @@
   "useJupyterLite": true,
   "selector": "pre[data-executable]",
   "liteBuildDir": "thebe",
-  "mountActivateWidget": false,
-  "mountStatusWidget": false
+  "mountActivateWidget": true,
+  "mountStatusWidget": true
 }
 </script>
+
+
+
 
 <link rel="stylesheet" href="thebe/thebe.css">
 <script src="thebe/thebe-core.min.js"></script>
@@ -16,29 +19,17 @@
 
 <style>
 /* Activate button */
-.thebe-activate {
-  display:inline-flex; align-items:center; gap:0.35rem;
-  padding:0.4rem 0.8rem; border-radius:999px;
-  font-size:0.9rem; font-weight:700;
-  background:#0ea5e9; color:#071219;
-}
-.thebe-activate.is-loading { background:#f59e0b; }
-.thebe-activate.is-ready { background:#22c55e; color:#052e16; }
-.thebe-activate.is-error { background:#ef4444; }
-.thebe-status { display:none !important; }
+
+
 
 /* Code cells */
-.thebe-cell { margin:1em 0; position:relative; }
 .thebe-input .CodeMirror {
-  height:auto !important; font-size:1.05rem; line-height:1.55;
-  background:#0f172a; color:#e2e8f0;
+  height:auto !important; 
+  background:inherit; 
 }
-.thebe-input .CodeMirror-lines { padding-right:2.2rem; }
-.thebe-input .CodeMirror-sizer,
-.thebe-input .CodeMirror-scroll { margin-left:0 !important; }
-.thebe-input .CodeMirror-gutters,
-.thebe-input .CodeMirror-gutter,
-.thebe-input .CodeMirror-linenumber { display:none !important; width:0 !important; }
+
+ .CodeMirror-gutters,
+.CodeMirror-linenumber { display:none }
 
 /* Syntax colors */
 .thebe-input .cm-keyword { color:#93c5fd; font-weight:600; }
@@ -49,28 +40,17 @@
 .thebe-input .cm-operator { color:#facc15; }
 .thebe-input .cm-builtin { color:#a5b4fc; }
 
+
 /* Cursor */
 .thebe-input .CodeMirror-cursor { border-left:2px solid #38bdf8; }
-.thebe-input .CodeMirror-selected { background:rgba(56,189,248,0.25) !important; }
 
 /* Output */
-.thebe-output { display:block; margin-top:0.6em; }
 .thebe-output .jp-OutputArea-output {
-  font-family:var(--mono-font); font-size:1.05rem; line-height:1.55;
-  background:#0f172a; color:#e2e8f0; border:1px solid #1e293b;
-  border-radius:6px; padding:0.4em 0.6em;
+  font-family:var(--mono-font); font-size:1.05rem; 
 }
 .thebe-output pre,
-.thebe-output code,
 .thebe-output div { font-size:inherit; line-height:inherit; color:#e2e8f0; }
 
 /* Run button */
-.thebe-controls { position:absolute; right:0.4em; z-index:5; }
-.thebe-run-button {
-  background:transparent; border:none; cursor:pointer;
-  font-size:0; color:transparent;
-}
-.thebe-run-button::before { content:"▶"; color:#38a169; font-size:1.4rem; }
-.thebe-run-button:hover::before { color:#2f855a; }
-.thebe-runall-button, .thebe-restart-button, .thebe-restartall-button { display:none !important; }
+
 </style>
