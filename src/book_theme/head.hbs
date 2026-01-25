@@ -1,52 +1,80 @@
-<script>
-  // Thebe config
-  window.thebeConfig = {
-    requestKernel: false,
-    reuseExistingServer: false,
-    binderOptions: {
-      repo: "MaximilianHertenstein/python_book",
-      ref: "main",
-      binderUrl: "https://mybinder.org"
-    },
-    kernelOptions: { name: "python3" },
-    selector: "pre[data-executable]"
-  };
-
-  // Mark Python code blocks
-  (function () {
-    const markPythonBlocks = () => {
-      document.querySelectorAll("pre code.language-python").forEach(codeBlock => {
-        const pre = codeBlock.parentElement;
-        if (!pre.hasAttribute('data-executable')) {
-          pre.setAttribute("data-executable", "true");
-          pre.setAttribute("data-language", "python");
-        }
-      });
-    };
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      markPythonBlocks();
-    }
-    document.addEventListener("DOMContentLoaded", markPythonBlocks);
-  })();
+<script type="text/x-thebe-config">
+{
+  "useBinder": false,
+  "useJupyterLite": true,
+  "selector": "pre[data-executable]",
+  "liteBuildDir": "thebe",
+  "mountActivateWidget": false,
+  "mountStatusWidget": false
+}
 </script>
 
-<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+<link rel="stylesheet" href="thebe/thebe.css">
+<script src="thebe/thebe-core.min.js"></script>
+<script src="thebe/thebe-lite.min.js"></script>
+<script src="thebe/index.js"></script>
 
 <style>
-/* Darcula theme, compact editor, hide line numbers and show buttons on hover */
-.thebe-cell, .thebelab-cell { margin:1em 0; position:relative; }
-.thebe-input .CodeMirror, .thebelab-input .CodeMirror { height:auto !important; }
-.thebe-input .CodeMirror-gutters, .thebelab-input .CodeMirror-gutters,
-.thebe-input .CodeMirror-gutter-wrapper, .thebelab-input .CodeMirror-gutter-wrapper,
-.thebe-input .CodeMirror-linenumber, .thebelab-input .CodeMirror-linenumber,
-.thebe-input .CodeMirror-gutter, .thebelab-input .CodeMirror-gutter { display:none !important; width:0 !important; visibility:hidden !important; }
-.thebe-output .jp-OutputArea-output, .thebelab-output .jp-OutputArea-output { margin-top:0.5em; font-family:var(--mono-font); }
+/* Activate + Status pills */
+.thebe-activate,
+.thebe-status {
+  display:inline-flex;
+  align-items:center;
+  gap:0.35rem;
+  padding:0.4rem 0.8rem;
+  border-radius:999px;
+  font-size:0.9rem;
+  font-weight:700;
+  border:1px solid transparent;
+}
+.thebe-status { display:none !important; }
+.thebe-activate { background:#0ea5e9; color:#071219; }
+.thebe-activate.is-loading { background:#f59e0b; color:#0b1220; }
+.thebe-activate.is-ready { background:#22c55e; color:#052e16; }
+.thebe-activate.is-error { background:#ef4444; color:#0b1220; }
 
-/* Run buttons only on hover (Thebe uses thebe-* classes) */
-.thebe-controls { position:absolute; top:0.5em; right:0.5em; display:flex; gap:0.5em; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.2s; z-index:5; }
-.thebe-run-button { display:none !important; opacity:0 !important; visibility:hidden !important; pointer-events:none; align-items:center; justify-content:center; padding:0.15em 0.25em; border:none; background:transparent; color:transparent; font-size:0; font-weight:700; box-shadow:none; }
+/* Cell layout + output visibility */
+.thebe-cell { margin:1em 0; position:relative; }
+.thebe-input { position:relative; }
+.thebe-input .CodeMirror { height:auto !important; font-size:1.05rem; line-height:1.55; background:#0f172a; color:#e2e8f0; font-family:var(--mono-font, "Source Code Pro", monospace); }
+/* Ensure CodeMirror keeps readable size + spacing after activation */
+.thebe-input .CodeMirror pre,
+.thebe-input .CodeMirror-lines pre,
+.thebe-input .CodeMirror-code,
+.thebe-input .CodeMirror-scroll { font-size:1.05rem !important; line-height:1.55 !important; }
+/* Reserve space so the run button doesn't overlap code */
+.thebe-input .CodeMirror-lines { padding-right: 2.2rem; }
+/* Dark theme token colors for readability */
+.thebe-input .cm-keyword { color:#93c5fd; font-weight:600; }
+.thebe-input .cm-def { color:#fbbf24; }
+.thebe-input .cm-variable, .thebe-input .cm-variable-2 { color:#e2e8f0; }
+.thebe-input .cm-number { color:#fca5a5; }
+.thebe-input .cm-string { color:#86efac; }
+.thebe-input .cm-comment { color:#94a3b8; font-style:italic; }
+.thebe-input .cm-operator { color:#facc15; }
+.thebe-input .cm-builtin { color:#a5b4fc; }
+.thebe-input .cm-property { color:#c4b5fd; }
+.thebe-input .CodeMirror-gutters,
+.thebe-input .CodeMirror-gutter,
+.thebe-input .CodeMirror-gutter-wrapper,
+.thebe-input .CodeMirror-linenumbers,
+.thebe-input .CodeMirror-linenumber { display:none !important; width:0 !important; }
+/* Remove reserved gutter space to prevent overlap */
+.thebe-input .CodeMirror-sizer { margin-left: 0 !important; }
+.thebe-input .CodeMirror-scroll { margin-left: 0 !important; }
+.thebe-output { display:block; margin-top:0.6em; }
+.thebe-output .jp-OutputArea-output { font-family:var(--mono-font); font-size:1.05rem; line-height:1.55; background:#0f172a; color:#e2e8f0; border:1px solid #1e293b; border-radius:6px; padding:0.4em 0.6em; }
+.thebe-output pre, .thebe-output code, .thebe-output div { font-size:inherit; line-height:inherit; color:#e2e8f0; }
+.thebe-output pre, .thebe-output code, .thebe-output div { color:#e2e8f0; }
+
+/* Restore earlier run button styling: show on hover, green arrow */
+.thebe-controls { position:absolute; right:0.4em; display:flex; align-items:center; gap:0.5em; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.2s; z-index:5; }
+.thebe-input .CodeMirror-cursor { border-left: 2px solid #38bdf8; }
+.thebe-input .CodeMirror.cm-fat-cursor .CodeMirror-cursor { background: #38bdf8; }
+.thebe-input .CodeMirror-selected { background: rgba(56, 189, 248, 0.25) !important; }
+.thebe-input .CodeMirror-focused .CodeMirror-selected { background: rgba(56, 189, 248, 0.35) !important; }
+.thebe-run-button { display:inline-flex !important; opacity:0 !important; visibility:hidden !important; pointer-events:none; align-items:center; justify-content:center; padding:0.15em 0.25em; border:none; background:transparent; color:transparent; font-size:0; font-weight:700; box-shadow:none; }
 .thebe-run-button::before { content:"▶"; line-height:1; color:#38a169; font-size:1.4rem; }
-.thebe-run-button:hover { background:transparent; }
 .thebe-run-button:hover::before { color:#2f855a; }
 .thebe-run-button:active::before { color:#276749; }
 .thebe-cell:hover .thebe-controls { opacity:1; visibility:visible; pointer-events:auto; }
