@@ -1,0 +1,7 @@
+[book]
+authors = ["MaximilianHertenstein"]
+language = "de"
+
+[output.html]
+additional-js = ["src/book_theme/thebe_init.js"]
+theme = "src/book_theme"
