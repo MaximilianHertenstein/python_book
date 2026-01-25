@@ -35,7 +35,6 @@
 
 
 /* Cursor */
-{{!-- .thebe-input .CodeMirror-cursor { border-left:2px solid #38bdf8; } --}}
 
 /* Output */
 .thebe-output .jp-OutputArea-output {
@@ -46,4 +45,55 @@
 
 /* Run button */
 
+/* Thebe widgets - position in menu bar */
+.thebe-activate, .thebe-status {
+  position: fixed;
+  top: 1.6rem;
+  z-index: 1000;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  border: none !important;
+  background: transparent !important;
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.thebe-activate {
+  left: 350px;
+}
+
+.thebe-status {
+  left: 480px;
+}
+
+/* Hide button styling, show only text */
+.thebe-activate button, .thebe-status button {
+  background: none !important;
+  border: none !important;
+  padding: 0 0.3rem !important;
+  color: inherit !important;
+  cursor: pointer;
+  font-size: inherit;
+  height: auto;
+  line-height: 1.4;
+}
+
+
+.thebe-runall-button, .thebe-restartall-button { display:none }
+
+
+
+/* Hide Thebe run all and restart buttons */
+button[data-commandlinker-command*="run all"],
+button[data-commandlinker-command*="restart"],
+.thebe-run-all,
+.thebe-restart {
+  display: none !important;
+}
+
 </style>
+
+<div><div class="thebe-activate"></div>
+<div class="thebe-status"></div></div>
+
