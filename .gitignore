@@ -5,5 +5,7 @@ src/thebe/*
 !src/thebe/thebe.css
 !src/thebe/thebe-core.min.js
 !src/thebe/thebe-lite.min.js
+!src/thebe/545.thebe-lite.min.js
+
 !src/thebe/index.js
 
