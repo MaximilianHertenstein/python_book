@@ -1,0 +1,10 @@
+{
+  "sections": [
+    {
+      "chapter": {
+        "name": "Chapter 1",
+        "content": "{{#quiz ../quizzes/python-basics.toml}}"
+      }
+    }
+  ]
+}

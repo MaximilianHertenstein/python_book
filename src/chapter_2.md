@@ -1,6 +1,5 @@
 # Chapter 2
 
-
 ```python
 print("Hello World!!")
 ```
