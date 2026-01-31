@@ -191,7 +191,7 @@ jobs:
         toolchain: stable
     
     - name: Install mdBook
-      run: cargo install mdbook --version 0.4.45 --locked
+      run: cargo install mdbook --version 0.4.52 --locked
     
     - name: Install mdbook-quiz
       run: cargo install mdbook-quiz --locked
