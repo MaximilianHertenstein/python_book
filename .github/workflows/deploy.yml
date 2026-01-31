@@ -33,6 +33,9 @@ jobs:
       - name: Install mdbook-quiz
         run: cargo install mdbook-quiz --locked
 
+      - name: Install mdbook-admonish
+        run: cargo install mdbook-admonish --locked
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:

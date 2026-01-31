@@ -22,6 +22,9 @@ cargo install mdbook --version 0.4.45 --locked
 
 # Install mdbook-quiz
 cargo install mdbook-quiz --locked
+
+# Install mdbook-admonish
+cargo install mdbook-admonish --locked
 ```
 
 ### NPM Dependencies
@@ -110,6 +113,35 @@ context = "In Python, variables are assigned directly without keywords"
 ```
 
 For more quiz formats, see the [mdbook-quiz documentation](https://github.com/cognitive-engineering-lab/mdbook-quiz#quiz-schema).
+
+## Admonitions
+
+This book uses [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish) to add callout boxes for notes, warnings, tips, and other admonitions.
+
+### Usage
+
+Use admonitions in your markdown with the following syntax:
+
+```markdown
+> [!NOTE]
+> This is a note
+
+> [!WARNING]
+> This is a warning
+
+> [!TIP]
+> This is a tip
+
+> [!IMPORTANT]
+> This is important
+
+> [!CAUTION]
+> Be careful!
+```
+
+Supported types: `NOTE`, `ABSTRACT`, `INFO`, `TIP`, `SUCCESS`, `QUESTION`, `WARNING`, `FAILURE`, `DANGER`, `BUG`, `EXAMPLE`, `QUOTE`
+
+See the [mdbook-admonish documentation](https://github.com/tommilligan/mdbook-admonish) for more details.
 
 ## Thebe (Interactive Code Execution)
 
