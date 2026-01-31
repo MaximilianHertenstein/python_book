@@ -35,7 +35,7 @@ npm install
 Then copy the Thebe build artifacts to the project:
 
 ```bash
-npx copy-thebe-assets book/thebe
+npx copy-thebe-assets src/thebe
 ```
 
 This needs to be done once during setup and again if you update Thebe packages.
@@ -122,7 +122,7 @@ Thebe is configured via `src/book_theme/thebe_init.js`. The JavaScript files are
 **If you've modified Thebe packages**, rebuild the assets:
 
 ```bash
-npx copy-thebe-assets book/thebe
+npx copy-thebe-assets src/thebe
 ```
 
 Then rebuild the book:

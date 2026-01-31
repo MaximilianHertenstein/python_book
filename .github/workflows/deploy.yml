@@ -42,7 +42,7 @@ jobs:
         run: npm install
 
       - name: Copy Thebe assets
-        run: npx copy-thebe-assets book/thebe
+        run: npx copy-thebe-assets src/thebe
 
       - name: Build Book
         run: |
