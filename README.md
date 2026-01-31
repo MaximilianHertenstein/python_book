@@ -131,6 +131,66 @@ Then rebuild the book:
 npm run build
 ```
 
+## GitHub Actions / CI/CD Setup
+
+To build this book in GitHub Actions or other CI/CD systems, you need to install both mdBook and mdbook-quiz.
+
+### GitHub Actions Workflow Example
+
+Add this to your `.github/workflows/build.yml`:
+
+```yaml
+name: Build Book
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+    
+    - name: Install mdBook
+      run: cargo install mdbook --version 0.4.45 --locked
+    
+    - name: Install mdbook-quiz
+      run: cargo install mdbook-quiz --locked
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install npm dependencies
+      run: npm install
+    
+    - name: Copy Thebe assets
+      run: npx copy-thebe-assets book/thebe
+    
+    - name: Build book
+      run: npm run build
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: 'book'
+```
+
+**Key steps:**
+- Install mdBook v0.4.45 (not the latest version)
+- Install mdbook-quiz
+- Install npm dependencies
+- Copy Thebe assets
+- Build the book
+
 ## Troubleshooting
 
 ### "Unable to parse the input" error
@@ -146,3 +206,14 @@ cargo install mdbook --version 0.4.45 --locked
 - Ensure the quiz file path is relative to the markdown file: `{{#quiz ../quizzes/quiz-name.toml}}`
 - Check that the TOML file is valid (no syntax errors)
 - Verify the quiz file exists in `src/quizzes/`
+
+### GitHub Actions: mdbook-quiz not found
+
+If you get `The command 'mdbook-quiz' wasn't found` in GitHub Actions, make sure your workflow installs mdbook-quiz before building:
+
+```yaml
+- name: Install mdbook-quiz
+  run: cargo install mdbook-quiz --locked
+```
+
+See the [GitHub Actions / CI/CD Setup](#github-actions--cicd-setup) section above for a complete workflow example.
