@@ -20,11 +20,11 @@ Install the required versions:
 # Install mdBook v0.4.45
 cargo install mdbook --version 0.4.45 --locked
 
-# Install mdbook-quiz
-cargo install mdbook-quiz --locked
+# Install mdbook-quiz v0.4.0
+cargo install mdbook-quiz --version 0.4.0 --locked
 
-# Install mdbook-admonish
-cargo install mdbook-admonish --locked
+# Install mdbook-admonish v1.20.0
+cargo install mdbook-admonish --version 1.20.0 --locked
 ```
 
 ### NPM Dependencies

@@ -30,11 +30,11 @@ jobs:
       - name: Install mdBook v0.4.45
         run: cargo install mdbook --version 0.4.45 --locked
 
-      - name: Install mdbook-quiz
-        run: cargo install mdbook-quiz --locked
+      - name: Install mdbook-quiz v0.4.0
+        run: cargo install mdbook-quiz --version 0.4.0 --locked
 
-      - name: Install mdbook-admonish
-        run: cargo install mdbook-admonish --locked
+      - name: Install mdbook-admonish v1.20.0
+        run: cargo install mdbook-admonish --version 1.20.0 --locked
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
