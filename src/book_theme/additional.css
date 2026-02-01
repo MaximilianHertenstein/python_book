@@ -15,9 +15,13 @@ body.sidebar-visible .thebe-activate {
     left: calc(var(--sidebar-width) + 105px);
 }
 
+.thebe-status {
+    font-size: 0;
+    display: none;
+}
+
 .thebe-activate button,
 .thebe-status button {
-
     background: none;
     border: none;
     color: var(--icons);
@@ -62,7 +66,7 @@ body.sidebar-visible .thebe-activate {
 
 
 /* Hide Thebe runall and restart buttons */
-.thebe-runall-button,
+.thebe-runall-button, .thebe-restart-button,
 .thebe-restartall-button {
     display: none;
 }
