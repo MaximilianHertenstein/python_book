@@ -21,37 +21,46 @@
 <script src="thebe/index.js"></script>
 
 <style>
-/* Activate button - match menu bar styling */
+/* Activate button - integrate into menu bar left buttons */
 .thebe-activate, .thebe-status {
   position: fixed;
-  top: 15px;
-  z-index: 1000;
+  z-index: 10000;
   display: inline-flex;
   align-items: center;
-  line-height: var(--menu-bar-height);
+  top: 8px;
+  left: 120px;
+  transition: left 0.3s ease;
 }
 
-.thebe-activate {
-  left: 70vh;
+/* When sidebar is visible, move button to the right */
+body.sidebar-visible .thebe-activate {
+  left: calc(var(--sidebar-width) + 120px);
 }
 
-.thebe-activate button
- {
+.thebe-activate button,
+.thebe-status button {
   background: none;
   border: none;
   color: var(--icons);
+  padding: 0 8px;
+  cursor: pointer;
+  transition: color 0.5s;
   font-size: 0;
   height: auto;
+  line-height: var(--menu-bar-height);
 }
 
-.thebe-activate button:hover {
+.thebe-activate button:hover,
+.thebe-status button:hover {
   color: var(--icons-hover);
 }
 
 .thebe-activate-button::before {
   content: "\f135"; /* rocket icon */
   font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   font-size: 14px;
+  line-height: 1;
 }
 
 /* Code cells */
@@ -70,15 +79,10 @@
   color: #e2e8f0;
 }
 
-
 /* Hide Thebe runall and restart buttons */
 .thebe-runall-button, .thebe-restartall-button { 
   display: none;
 }
-</style>
-
-
-
 </style>
 
 <div><div class="thebe-activate icon-button"></i></div>
