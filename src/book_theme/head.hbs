@@ -22,43 +22,22 @@
 
 <style>
 /* Activate button */
-
-
-
-/* Code cells */
-.thebe-input .CodeMirror {
-  height:auto !important; 
-}
-
- .CodeMirror-gutters,
-.CodeMirror-linenumber { display:none }
-
-
-/* Cursor */
-
-/* Output */
-.thebe-output .jp-OutputArea-output {
-  font-family:var(--mono-font); font-size:1.05rem; 
-}
-.thebe-output pre,
-.thebe-output div { font-size:inherit; line-height:inherit; color:#e2e8f0; }
-
-/* Run button */
-
-/* Thebe widgets - position in menu bar */
 .thebe-activate, .thebe-status {
   position: fixed;
   top: 1.6rem;
   z-index: 1000;
   display: inline-flex;
   align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .thebe-activate {
   left: 100px;
 }
 
-
+.thebe-activate:hover {
+  transform: scale(1.1);
+}
 
 /* Hide button styling, show only text */
 .thebe-activate button, .thebe-status button {
@@ -67,23 +46,82 @@
   color: inherit !important;
   height: auto;
   padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
 .thebe-activate button {
   font-size: 0;
+}
+
+.thebe-activate button:hover {
+  color: var(--icons-hover);
 }
 
 .thebe-activate-button::before {
   content: "\f135"; /* rocket icon */
   font-family: "Font Awesome 6 Free";
   font-size: 1.6rem;
-	color: var(--icons);
-
+  color: var(--icons);
+  transition: color 0.3s ease;
 }
 
+.thebe-activate button:hover .thebe-activate-button::before {
+  color: var(--icons-hover);
+}
 
-.thebe-runall-button, .thebe-restartall-button { display:none }
+/* Code cells */
+.thebe-input .CodeMirror {
+  height: auto !important;
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease;
+}
 
+.thebe-input .CodeMirror:focus-within {
+  box-shadow: 0 0 0 2px var(--sidebar-active);
+}
 
+.CodeMirror-gutters,
+.CodeMirror-linenumber { 
+  display: none;
+}
+
+/* Output */
+.thebe-output .jp-OutputArea-output {
+  font-family: var(--mono-font);
+  font-size: 1.05rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: var(--theme-popup-bg);
+  transition: background-color 0.2s ease;
+}
+
+.thebe-output pre,
+.thebe-output div { 
+  font-size: inherit;
+  line-height: inherit;
+  color: #e2e8f0;
+}
+
+/* Run button styling */
+pre[data-executable] button.thebe-run-button {
+  position: absolute;
+  right: 35px;
+  top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s linear, visibility 0.1s linear;
+}
+
+pre[data-executable]:hover button.thebe-run-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Thebe runall and restart buttons */
+.thebe-runall-button, .thebe-restartall-button { 
+  display: none;
+}
 
 /* Hide Thebe run all and restart buttons */
 button[data-commandlinker-command*="run all"],
@@ -93,6 +131,14 @@ button[data-commandlinker-command*="restart"],
   display: none !important;
 }
 
+/* Mobile/Touch optimization */
+@media (hover: none) {
+  pre[data-executable] button.thebe-run-button {
+    padding: 0.3rem 1rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 </style>
 
 <div><div class="thebe-activate icon-button"></i></div>
