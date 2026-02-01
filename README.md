@@ -96,14 +96,12 @@ src/
 └── book_theme/       # Custom mdBook theme
     ├── additional.css    # Custom styling
     ├── header.hbs        # Header with Thebe status element
-    └── thebe_init.js     # Thebe initialization
 ```
 
 ## Styling
 
 The custom theme in `src/book_theme/additional.css` includes:
 - Centered Thebe activate button
-- Scaled copy button (75% size) to fit in code editors
 - Hidden Thebe control buttons (run all, restart, etc.)
 - Custom CodeMirror styling (no line numbers shown)
 
