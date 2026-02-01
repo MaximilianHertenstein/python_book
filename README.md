@@ -21,7 +21,7 @@ Install the required versions:
 
 ```bash
 # Install mdBook v0.4.45
-cargo install mdbook --version 0.4.45 --locked
+cargo install mdbook --version 0.4.52 --locked
 
 # Install mdbook-quiz v0.4.0
 cargo install mdbook-quiz --version 0.4.0 --locked
