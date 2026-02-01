@@ -6,10 +6,7 @@
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
     z-index: 10000;
-    display: inline-flex;
-    align-items: center;
 }
 
 /* Hide unused Thebe UI */
@@ -24,7 +21,6 @@
 .thebe-activate button {
     background: none;
     border: none;
-    padding: 0 8px;
     line-height: var(--menu-bar-height);
     font-size: 0;
     color: var(--icons);
