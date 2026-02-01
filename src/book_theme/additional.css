@@ -1,4 +1,4 @@
-/* Activate button - integrate into menu bar */
+/* Activate button - centered */
 .thebe-activate,
 .thebe-status {
     position: fixed;
@@ -10,14 +10,7 @@
     align-items: center;
 }
 
-.thebe-status {
-    font-size: 0;
-    display: none;
-}
-
-
-.clip-button {
-    font-size: 0;
+.thebe-status, .clip-button {
     display: none;
 }
 
@@ -40,7 +33,6 @@
 
 .thebe-activate-button::before {
     content: "\f135";
-    /* rocket icon */
     font-family: "Font Awesome 6 Free";
     font-size: 14px;
     line-height: 1;
@@ -62,12 +54,10 @@
     color: #e2e8f0;
 }
 
-
-
-
-
-/* Hide Thebe runall and restart buttons */
-.thebe-runall-button, .thebe-restart-button,
+/* Hide Thebe control buttons */
+.thebe-runall-button,
+.thebe-restart-button,
 .thebe-restartall-button {
     display: none;
 }
+

@@ -149,7 +149,7 @@ This book supports interactive Python code execution through [Thebe](https://the
 
 ### Thebe Setup
 
-Thebe is configured via `src/book_theme/thebe_init.js`. The JavaScript files are loaded asynchronously and require the Thebe assets to be copied to the build output.
+
 
 **If you've modified Thebe packages**, rebuild the assets:
 
