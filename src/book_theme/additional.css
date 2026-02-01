@@ -3,16 +3,11 @@
 .thebe-status {
     position: fixed;
     top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10000;
     display: inline-flex;
     align-items: center;
-    left: 105px;
-    transition: left 0.3s ease;
-}
-
-/* When sidebar is visible, move button to the right */
-body.sidebar-visible .thebe-activate {
-    left: calc(var(--sidebar-width) + 105px);
 }
 
 .thebe-status {
