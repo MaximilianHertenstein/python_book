@@ -21,31 +21,31 @@
 <script src="thebe/index.js"></script>
 
 <style>
-/* Activate button */
-.thebe-activate {
+/* Activate button - match menu bar styling */
+.thebe-activate, .thebe-status {
   position: fixed;
-  top: 1.6rem;
+  top: 15px;
   z-index: 1000;
   display: inline-flex;
+  align-items: center;
+  line-height: var(--menu-bar-height);
 }
 
 .thebe-activate {
   left: 70vh;
 }
 
-
-
-/* Hide button styling, show only text */
-.thebe-activate button, .thebe-status button {
-  background: none !important;
-  border: none !important;
-  height: auto;
+.thebe-activate button,
+.thebe-activate button:hover,
+.thebe-status button {
+  background: none;
+  border: none;
+  color: var(--icons);
+  padding: 0 8px;
   cursor: pointer;
-  FI
-}
-
-.thebe-activate button {
+  transition: color 0.5s;
   font-size: 0;
+  height: auto;
 }
 
 .thebe-activate button:hover {
@@ -55,22 +55,9 @@
 .thebe-activate-button::before {
   content: "\f135"; /* rocket icon */
   font-family: "Font Awesome 6 Free";
-  font-size: 1.6rem;
-  color: var(--icons);
-  transition: color 0.3s ease;
-}
-
-
-
-.thebe-activate-button::before button:hover {
-    color: var(--icons-hover);
-}
-
-
-
-
-.thebe-activate button:hover .thebe-activate-button::before {
-  color: var(--icons-hover);
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1;
 }
 
 /* Code cells */
@@ -78,27 +65,34 @@
   height: auto !important;
 }
 
-
-
 .CodeMirror-gutters,
 .CodeMirror-linenumber { 
   display: none;
 }
 
 /* Output */
-
-
 .thebe-output pre,
 .thebe-output div { 
   color: #e2e8f0;
 }
 
+/* Run button - show only on hover */
+pre[data-executable] button.thebe-run-button {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s linear, visibility 0.1s linear;
+}
 
+pre[data-executable]:hover button.thebe-run-button {
+  opacity: 1;
+  visibility: visible;
+}
 
-/* Thebe runall and restart buttons */
+/* Hide Thebe runall and restart buttons */
 .thebe-runall-button, .thebe-restartall-button { 
   display: none;
 }
+</style>
 
 
 
