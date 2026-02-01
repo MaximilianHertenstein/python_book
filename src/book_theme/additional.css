@@ -1,4 +1,7 @@
-/* Activate button - centered */
+/* ===============================
+   Thebe floating controls
+   =============================== */
+
 .thebe-activate,
 .thebe-status {
     position: fixed;
@@ -10,20 +13,27 @@
     align-items: center;
 }
 
-.thebe-status, .clip-button {
+/* Hidden UI elements */
+.thebe-status,
+.clip-button,
+.thebe-runall-button,
+.thebe-restart-button,
+.thebe-restartall-button {
     display: none;
 }
 
+/* Buttons */
 .thebe-activate button,
 .thebe-status button {
     background: none;
     border: none;
-    color: var(--icons);
     padding: 0 8px;
-    transition: color 0.5s;
-    font-size: 0;
     height: auto;
     line-height: var(--menu-bar-height);
+    font-size: 0;
+
+    color: var(--icons);
+    transition: color 0.5s;
 }
 
 .thebe-activate button:hover,
@@ -31,6 +41,7 @@
     color: var(--icons-hover);
 }
 
+/* Font Awesome icon */
 .thebe-activate-button::before {
     content: "\f135";
     font-family: "Font Awesome 6 Free";
@@ -38,7 +49,11 @@
     line-height: 1;
 }
 
-/* Code cells */
+
+/* ===============================
+   Code cells
+   =============================== */
+
 .thebe-input .CodeMirror {
     height: auto !important;
 }
@@ -48,16 +63,12 @@
     display: none;
 }
 
-/* Output */
+
+/* ===============================
+   Output styling
+   =============================== */
+
 .thebe-output pre,
 .thebe-output div {
     color: #e2e8f0;
 }
-
-/* Hide Thebe control buttons */
-.thebe-runall-button,
-.thebe-restart-button,
-.thebe-restartall-button {
-    display: none;
-}
-
