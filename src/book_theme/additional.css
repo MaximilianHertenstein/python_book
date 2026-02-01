@@ -68,7 +68,6 @@
    Output styling
    =============================== */
 
-.thebe-output pre,
-.thebe-output div {
+.thebe-output pre {
     color: #e2e8f0;
 }
