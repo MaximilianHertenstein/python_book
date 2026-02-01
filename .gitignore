@@ -2,5 +2,6 @@ book
 node_modules
 src/thebe
 src/quiz
+mdbook-admonish.css
 
 
