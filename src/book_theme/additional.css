@@ -1,11 +1,10 @@
 /* ===============================
-   Thebe floating controls
+   Thebe floating activate button
    =============================== */
 
-.thebe-activate,
-.thebe-status {
+.thebe-activate {
     position: fixed;
-    top: 6px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
@@ -13,7 +12,7 @@
     align-items: center;
 }
 
-/* Hidden UI elements */
+/* Hide unused Thebe UI */
 .thebe-status,
 .clip-button,
 .thebe-runall-button,
@@ -22,34 +21,26 @@
     display: none;
 }
 
-/* Buttons */
-.thebe-activate button,
-.thebe-status button {
+.thebe-activate button {
     background: none;
     border: none;
     padding: 0 8px;
-    height: auto;
     line-height: var(--menu-bar-height);
     font-size: 0;
-
     color: var(--icons);
     transition: color 0.5s;
 }
 
-.thebe-activate button:hover,
-.thebe-status button:hover {
+.thebe-activate button:hover {
     color: var(--icons-hover);
 }
 
-/* Font Awesome icon */
 .thebe-activate-button::before {
     content: "\f135";
     font-family: "Font Awesome 6 Free";
     font-size: 14px;
-    line-height: 1;
+    font-weight: 900;
 }
-
-
 /* ===============================
    Code cells
    =============================== */
