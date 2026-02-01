@@ -28,6 +28,9 @@ cargo install mdbook-quiz --version 0.4.0 --locked
 
 # Install mdbook-admonish v1.20.0
 cargo install mdbook-admonish --version 1.20.0 --locked
+
+# Install admonish assets
+mdbook-admonish install .
 ```
 
 ### NPM Dependencies
