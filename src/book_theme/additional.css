@@ -15,6 +15,12 @@
     display: none;
 }
 
+
+.clip-button {
+    font-size: 0;
+    display: none;
+}
+
 .thebe-activate button,
 .thebe-status button {
     background: none;
