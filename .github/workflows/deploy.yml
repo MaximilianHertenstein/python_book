@@ -36,6 +36,9 @@ jobs:
       - name: Install mdbook-admonish v1.20.0
         run: cargo install mdbook-admonish --version 1.20.0 --locked
 
+      - name: Install admonish assets
+        run: mdbook-admonish install .
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
