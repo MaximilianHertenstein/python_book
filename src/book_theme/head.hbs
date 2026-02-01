@@ -24,17 +24,17 @@
 /* Activate button - integrate into menu bar */
 .thebe-activate, .thebe-status {
   position: fixed;
-  top: 5px;
+  top: 6px;
   z-index: 10000;
   display: inline-flex;
   align-items: center;
-  left: 100px;
+  left: 105px;
   transition: left 0.3s ease;
 }
 
 /* When sidebar is visible, move button to the right */
 body.sidebar-visible .thebe-activate {
-  left: calc(var(--sidebar-width) + 100px);
+  left: calc(var(--sidebar-width) + 105px);
 }
 
 .thebe-activate button,
