@@ -21,13 +21,13 @@
 <script src="thebe/index.js"></script>
 
 <style>
-/* Activate button - integrate into menu bar left buttons */
+/* Activate button - integrate into menu bar */
 .thebe-activate, .thebe-status {
   position: fixed;
+  top: 8px;
   z-index: 10000;
   display: inline-flex;
   align-items: center;
-  top: 8px;
   left: 120px;
   transition: left 0.3s ease;
 }
@@ -58,7 +58,6 @@ body.sidebar-visible .thebe-activate {
 .thebe-activate-button::before {
   content: "\f135"; /* rocket icon */
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   font-size: 14px;
   line-height: 1;
 }
@@ -79,10 +78,18 @@ body.sidebar-visible .thebe-activate {
   color: #e2e8f0;
 }
 
+
+
+
+
 /* Hide Thebe runall and restart buttons */
 .thebe-runall-button, .thebe-restartall-button { 
   display: none;
 }
+</style>
+
+
+
 </style>
 
 <div><div class="thebe-activate icon-button"></i></div>
