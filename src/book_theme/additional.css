@@ -3,10 +3,42 @@
    =============================== */
 
 .thebe-activate {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 10000;
+    position: fixed !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10001 !important;
+    line-height: var(--menu-bar-height) !important;
+}
+
+.thebe-activate button {
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    font-size: 0 !important;
+    cursor: pointer !important;
+    color: var(--icons) !important;
+    transition: color 0.5s !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.thebe-activate button::before {
+    content: "\f135" !important;
+    font-family: "FontAwesome" !important;
+    font-size: 14px !important;
+    display: inline-block !important;
+    font-style: normal !important;
+    font-weight: 900 !important;
+}
+
+.thebe-activate button:hover,
+.thebe-activate button:active {
+    color: var(--icons-hover) !important;
 }
 
 /* Hide unused Thebe UI */
@@ -18,25 +50,7 @@
     display: none;
 }
 
-.thebe-activate button {
-    background: none;
-    border: none;
-    line-height: var(--menu-bar-height);
-    font-size: 0;
-    color: var(--icons);
-    transition: color 0.5s;
-}
 
-.thebe-activate button:hover {
-    color: var(--icons-hover);
-}
-
-.thebe-activate-button::before {
-    content: "\f135";
-    font-family: "Font Awesome 6 Free";
-    font-size: 14px;
-    font-weight: 900;
-}
 /* ===============================
    Code cells
    =============================== */
