@@ -8,44 +8,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: write
       pages: write
       id-token: write
 
-
     steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+      - name: Checkout
+        uses: actions/checkout@v6
 
       - name: Install mdBook and plugins
         run: |
-          cargo install mdbook --version 0.4.52 --locked
-          cargo install mdbook-quiz --version 0.4.0 --locked
-          cargo install mdbook-admonish --version 1.20.0 --locked
-
-      - name: Install admonish assets
-        run: mdbook-admonish install .
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24'
-
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: Copy Thebe assets
-        run: npx copy-thebe-assets src/thebe
+          cargo install mdbook --version 0.5.4 --locked
+          cargo install mdbook-quiz --version 0.5.0 --locked
 
       - name: Build Book
         run: |

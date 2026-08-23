@@ -1,64 +1,112 @@
-/* ===============================
-   Thebe floating activate button
-   =============================== */
-
-.thebe-activate {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 10001;
+/* Play-Button in der Codezelle fuer ```python,py-execute (runner.js).
+   Der Button steckt in mdBooks eigener .buttons-Leiste (derselben wie der
+   eingebaute Kopier-Button) und erbt von dort automatisch Position, Rahmen,
+   Groesse, Hover- und Sichtbarkeits-Verhalten aus mdBooks chrome.css.
+   Hier muessen nur noch Icon-Inhalt und Akzentfarbe ergaenzt werden. */
+pre > .buttons button.py-play-btn {
+    color: #2e8b40;
 }
 
-.thebe-activate button {
-    background: none;
-    border: none;
-    font-size: 0;
+pre > .buttons button.py-play-btn:hover {
+    color: var(--sidebar-active);
 }
 
-.thebe-activate button::before {
-    content: "" ;
-    display: inline-block ;
-    width: 20px;
-    height: 20px;
-    background-color: var(--icons);
-    transition: background-color 0.5s;
-    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M192 384L88.5 384C63.6 384 48.3 356.9 61.1 335.5L114 247.3C122.7 232.8 138.3 224 155.2 224L250.2 224C326.3 95.1 439.8 88.6 515.7 99.7C528.5 101.6 538.5 111.6 540.3 124.3C551.4 200.2 544.9 313.7 416 389.8L416 484.8C416 501.7 407.2 517.3 392.7 526L304.5 578.9C283.2 591.7 256 576.3 256 551.5L256 448C256 412.7 227.3 384 192 384L191.9 384zM464 224C464 197.5 442.5 176 416 176C389.5 176 368 197.5 368 224C368 250.5 389.5 272 416 272C442.5 272 464 250.5 464 224z"/></svg>') center/contain no-repeat !important;
-    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M192 384L88.5 384C63.6 384 48.3 356.9 61.1 335.5L114 247.3C122.7 232.8 138.3 224 155.2 224L250.2 224C326.3 95.1 439.8 88.6 515.7 99.7C528.5 101.6 538.5 111.6 540.3 124.3C551.4 200.2 544.9 313.7 416 389.8L416 484.8C416 501.7 407.2 517.3 392.7 526L304.5 578.9C283.2 591.7 256 576.3 256 551.5L256 448C256 412.7 227.3 384 192 384L191.9 384zM464 224C464 197.5 442.5 176 416 176C389.5 176 368 197.5 368 224C368 250.5 389.5 272 416 272C442.5 272 464 250.5 464 224z"/></svg>') center/contain no-repeat !important;
+pre > .buttons button.py-play-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
 }
 
-.thebe-activate button:hover::before,
-.thebe-activate button:active::before {
-    background-color: var(--icons-hover);
-}
-
-/* Hide unused Thebe UI */
-.thebe-status,
-.clip-button,
-.thebe-runall-button,
-.thebe-restart-button,
-.thebe-restartall-button {
+.py-output {
+    background: rgba(0, 0, 0, 0.04);
+    border-left: 3px solid #008cba;
+    padding: 8px 12px;
+    margin-top: 6px;
+    border-radius: 0 4px 4px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
     display: none;
 }
 
-
-/* ===============================
-   Code cells
-   =============================== */
-
-.thebe-input .CodeMirror {
-    height: auto;
+.py-output.py-output-error {
+    border-left-color: #c0392b;
+    color: #c0392b;
 }
 
-.CodeMirror-gutters,
-.CodeMirror-linenumber {
-    display: none;
+/* Keep PyScript editors readable and visually separated from the text flow. */
+py-editor,
+mpy-editor {
+    display: block;
+    margin: 1rem 0 1.5rem;
 }
 
+py-editor .py-editor-box,
+mpy-editor .mpy-editor-box {
+    border: 1px solid var(--table-border-color);
+    border-radius: 10px;
+    padding: 0.75rem;
+    background: var(--bg);
+}
 
-/* ===============================
-   Output styling
-   =============================== */
+py-editor .py-editor-box::before,
+mpy-editor .mpy-editor-box::before {
+    content: "" !important;
+    display: none !important;
+}
 
-.thebe-output pre {
-    color: #e2e8f0;
+py-editor .py-editor-input,
+mpy-editor .mpy-editor-input {
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: #f6f8fa;
+    color: #1f2328;
+}
+
+code.language-python.py-execute {
+    outline: none;
+}
+
+py-editor .py-editor-output,
+mpy-editor .mpy-editor-output {
+    margin-top: 0.75rem;
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: #f6f8fa;
+    color: #1f2328;
+}
+
+py-editor .py-editor-run-button,
+mpy-editor .mpy-editor-run-button {
+    border: 1px solid var(--table-border-color);
+    border-radius: 999px;
+    background: var(--bg);
+}
+
+py-editor .cm-editor,
+mpy-editor .cm-editor {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    background: #f6f8fa !important;
+    color: #1f2328 !important;
+}
+
+py-editor .cm-content,
+mpy-editor .cm-content,
+py-editor .cm-line,
+mpy-editor .cm-line,
+py-editor .cm-scroller,
+mpy-editor .cm-scroller,
+py-editor .cm-content *,
+mpy-editor .cm-content * {
+    color: #1f2328 !important;
+}
+
+py-editor .cm-gutters,
+mpy-editor .cm-gutters,
+py-editor .cm-lineNumbers,
+mpy-editor .cm-lineNumbers {
+    display: none !important;
+    background: transparent !important;
+    border: 0 !important;
 }

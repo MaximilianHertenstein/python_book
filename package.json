@@ -1,26 +1,9 @@
 {
   "name": "python_book",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "mdbook build",
-    "serve": "mdbook serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MaximilianHertenstein/python_book.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MaximilianHertenstein/python_book/issues"
-  },
-  "homepage": "https://github.com/MaximilianHertenstein/python_book#readme",
-  "dependencies": {
-    "thebe": "^0.9.3",
-    "thebe-lite": "^0.5.0"
+    "serve": "mdbook serve"
   }
 }

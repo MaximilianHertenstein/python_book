@@ -1,9 +1,9 @@
 # Chapter 2
 
-```python
+```python,py-execute
 print("Hello World!!")
 ```
 
-```python
+```python,py-execute
 2 + 3
 ```
