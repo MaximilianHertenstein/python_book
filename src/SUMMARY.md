@@ -9,9 +9,11 @@
 - [Kommentare](./kommentare/kommentare.md)
 - [Funktionen 2](./funktionen_2/funktionen_2.md)
 - [Strings](./strings/strings.md)
-- [Typen](./datentypen/datentypen.md)
 - [Strings und Funktionen](./funktionen_und_strings/funktionen_und_strings.md)
-- [Interaktive Programme](./ein_und_ausgabe/ein_und_ausgabe.md)
+- [Datentypen](./datentypen/datentypen.md)
+
+- [Ausgabe mit print](./ausgabe_mit_print/ausgabe_mit_print.md)
+- [Eingabe](./eingabe/eingabe.md)
 - [Booleans](./booleans/booleans.md)
 - [Bedingte Ausführung](./bedingte_ausführung/bedingte_ausführung.md)
 - [Variablen neue Werte zuweisen](./werte_von_variablen_ändern/werte_von_variablen_ändern.md)

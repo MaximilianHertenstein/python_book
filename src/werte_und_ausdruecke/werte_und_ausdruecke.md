@@ -37,6 +37,10 @@ Auswertung eines *Ausdrucks* festlegen.
 von *Operatoren* werden Berechnungen (*Operationen*) wie die Addition,
 Subtraktion und Multiplikation durchgeführt. Später werden wir noch
 weitere *Operatoren* kennenlernen. 
+- Links und rechts von einem *Operator*
+stehen die *Operanden*, die in der Rechnung verwendet werden. Im ersten
+Beispiel oben steht der *Operator* `+` zwischen dem linken *Operanden*
+`4` und dem rechten *Operanden* `3`.
 `4` und dem rechten *Operanden* `3`.
 - Zahlen wie `4` und `3` sind *Werte* (*Values*). *Werte* sind die
 kleinsten Einheiten, mit denen ein Computerprogramm arbeitet. Das

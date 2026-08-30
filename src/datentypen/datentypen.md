@@ -1,11 +1,8 @@
-``` python, py-execute
-def square(x: int) -> int:
-    return x * x
-```
 
-# Typen
 
-## Einteilung von Werten in Typen
+# Datentypen
+
+## Einteilung von Werten in Datentpyen
 
 Wir haben mit *Integern* und *Strings* zwei verschiedene Arten von
 *Werten* kennengelernt und gesehen, dass mit verschiedenen Arten von
@@ -16,9 +13,9 @@ kennenlernen werden, sind in der folgenden Abbildung dargestellt.
 
 ![datentypen_grafik](datentypen_grafik/datentypen_grafik.svg)
 
-`str` steht für *String*, und `int` für *Integer*. Die Abkürzung `int`
-haben wir schon genutzt, um zu kennzeichnen, dass die *Argumente* und
-der Rückgabewert einer Funktion *Integer* sind. Die weiteren *Typen*
+`str` steht für *String*, und `int` für *Integer*. Diese Abkürzungen
+haben wir schon genutzt, um zu kennzeichnen, zu welchem Datentyp die *Argumente* und
+der Rückgabewert einer Funktion gehören. Die weiteren *Typen*
 werden wir in den folgenden Kapiteln kennenlernen.
 
 ## Typfehler
@@ -31,7 +28,7 @@ definiert. Wir haben schon gesehen, dass man einen *String* und ein
 3 * 'good bye'
 ```
 
-Wir können aber keinen *String* und ein *Integer* addieren.
+Wir können aber **nicht** einen *String* und ein *Integer* addieren.
 
 ``` python, py-execute
 1 + '2'
@@ -52,7 +49,7 @@ Die Fehlermeldung sagt aus, dass wir eine Zeichenfolge (`sequence`) nur
 mit einem *Integer* und nicht mit einem weiteren *String* multiplizieren
 können.
 
-## Typannotation
+<!-- ## Typannotation
 
 Beim Implementieren einer Funktion haben wir bisher immer angegeben,
 dass man bei einem Funktionsaufruf ein *Integer* als *Argument*
@@ -79,7 +76,7 @@ kann man schon beim Lesen des *Funktionskopfes* erkennen, mit welchen
 
 Diese Angabe der *Typen* der Parameter und des *Rückgabewerts* erfolgt
 immer mit den Zeichen `:` und `->`. Neben `int` für *Integer* müssen wir
-aber noch weitere Abkürzungen für *Typen* kennen.
+aber noch weitere Abkürzungen für *Typen* kennen. -->
 
 ## Typkonversion
 
@@ -88,6 +85,8 @@ gewünschte *Operation* nicht durchgeführt werden kann.
 
 ``` python, py-execute
 number = 3
+```
+``` python, py-execute
 message = 'The value of number is: '
 ```
 
@@ -95,13 +94,17 @@ message = 'The value of number is: '
 message + number
 ```
 
-Um den \*Typ\* eines \*Werts\* zu ändern, können die Funktionen `int`
+Um den *Typ* eines *Werts* zu ändern, können die Funktionen `int`
 und `str` genutzt werden. Diese geben einen *Wert* mit dem
 entsprechenden *Typ* zurück.
 
 ``` python, py-execute
 str(number)
+```
+``` python, py-execute
 message + str(number)
+```
+``` python, py-execute
 int('052')
 ```
 

@@ -4,6 +4,7 @@ img,
 figure img {
     display: block;
     max-width: 100%;
+    min-width: 70%;
     height: auto;
     margin: 1rem auto;
     background-color: #ffffff;
@@ -84,12 +85,27 @@ code.language-python.py-execute {
 
 py-editor .py-editor-output,
 mpy-editor .mpy-editor-output {
+    display: none;
     margin-top: 0.75rem;
     border: 1px solid var(--table-border-color);
     border-radius: 8px;
     padding: 0.5rem;
     background: #f6f8fa;
     color: #1f2328;
+}
+
+py-editor .py-editor-output:empty,
+mpy-editor .py-editor-output:empty {
+    display: none !important;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+py-editor .py-editor-output:not(:empty),
+mpy-editor .py-editor-output:not(:empty) {
+    display: block;
 }
 
 py-editor .py-editor-run-button,

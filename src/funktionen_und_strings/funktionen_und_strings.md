@@ -1,11 +1,4 @@
-``` python, py-execute
-def greet_bavarian(name: str) -> str:
-    return 'Servus ' + name
 
-
-def greet_bavarian_wrong(name: str) -> str:
-    return 'Servus ' + 'name'
-```
 
 # Strings und Funktionen
 
@@ -57,7 +50,7 @@ Im zweiten Fall kann man folgendermaßen rechnen:
 'Servus ' + 'Grace'
 ```
 
-Beide Rechnungen beginnen mit dem *String-Literal* `'Servus '`. Dieses
+Beide Rechnungen beginnen mit dem *String* `'Servus '`. Dieses
 kann also genau so in dem *Ausdruck* hinter `return` verwendet werden.
 Bei beiden Rechnungen taucht anschließend der *Operator* `+` auf. Auch
 dieser muss also in dem *Ausdruck* hinter `return` verwendet werden.
@@ -80,7 +73,7 @@ def greet_bavarian(name: str) -> str:
 
 Um `'Servus'` stehen Hochkommata aber nicht um `name` und
 `greet_bavarian`. Der Grund dafür ist, dass `'Servus '` ein
-*String-Literal* ist. Dieses soll genau so im Ergebnis auftauchen. Egal
+*String* ist. Dieses soll genau so im Ergebnis auftauchen. Egal
 mit welchen *Argumenten* die Funktion aufgerufen wird, wollen wir, dass
 das Ergebnis mit `'Servus'` beginnt.
 
@@ -106,7 +99,7 @@ Wird die Funktion mit anderen *Argumenten* aufgerufen, werden die
 *Parameter* auch andere *Werte* ersetzt. Im Gegensatz dazu bleibt der
 *String* `'Servus '` immer gleich.
 
-## Fehler beim Verwechseln von String-Literalen und Parameternamen
+## Fehler beim Verwechseln von String und Parameternamen
 
 Den Unterschied kann man sich auch klarmachen, wenn man `name` im
 *Funktionskörper* auch als *String* schreibt.
@@ -121,7 +114,7 @@ greet_bavarian_wrong('Ada')
 greet_bavarian_wrong('Grace')
 ```
 
-`'name'` ist ein *String-Literal*. Dieses taucht also unabhängig vom
+`'name'` ist ein *String*. Dieses taucht also unabhängig vom
 übergebenen Argument genau so im Ergebnis auf.
 
 Auch der Funktionsname `greet_bavarian` ist ein Name, der benötigt wird,
