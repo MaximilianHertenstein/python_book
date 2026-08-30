@@ -1,3 +1,19 @@
+/* Bilder und SVG-Grafiken im Inhalt zentrieren und mit weißem Hintergrund
+   darstellen, ohne die UI-Icons der Website zu beeinflussen. */
+img,
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    background-color: #ffffff;
+}
+
+figure {
+    margin: 1rem auto;
+    text-align: center;
+}
+
 /* Play-Button in der Codezelle fuer ```python,py-execute (runner.js).
    Der Button steckt in mdBooks eigener .buttons-Leiste (derselben wie der
    eingebaute Kopier-Button) und erbt von dort automatisch Position, Rahmen,

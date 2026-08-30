@@ -6,6 +6,7 @@ language = "de"
 theme = "src/book_theme"
 additional-css = [ "src/book_theme/additional.css" ]
 additional-js = [ "src/book_theme/runner.js" ]
+mathjax-support = true
 
 [preprocessor.quiz]
 optional = true
