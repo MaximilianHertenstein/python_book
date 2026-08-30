@@ -9,9 +9,10 @@ Die folgende Matheaufgabe können wir einfach in der Shell lösen.
 **Mathematikaufgabe 1**. *Für die englischen Längeneinheiten Fuß und
 Yard gilt:*
 
-- *Ein Yard sind *3* Fuß.*
+- *Ein Yard sind $3$ Fuß.*
 
-*Wie viel sind *\,7* Yard in Fuß und wie viel sind *\,19* Yard in
+- *a)* Wie viel sind $7$ Yard in Fuß
+- *b)* wie viel sind $19$ Yard in
 Fuß?*
 
 
@@ -31,11 +32,11 @@ Code.
 - Wenn wir den Code später ohne die Aufgabe lesen, wissen wir
   höchstwahrscheinlich nicht, was wir berechnen wollten.
 
-- Die Multiplikation mit *3*, um eine Länge in Yard in eine Länge in
+- Die Multiplikation mit $3$, um eine Länge in Yard in eine Länge in
   Fuß umzurechnen, taucht zweimal auf.
 
 - Wenn wir nach der Rechnung feststellen würden, dass ein Yard
-  tatsächlich *4* Fuß sind, müssten wir den Code an beiden Stellen
+  tatsächlich $4$ Fuß sind, müssten wir den Code an beiden Stellen
   ändern.
 
 Beide Probleme kann man mit Hilfe von Funktionen vermeiden.
@@ -127,5 +128,3 @@ Variablen verwendet werden.
 
 [^1]: Für die Namen von Funktionen gelten die selben Regeln wie für die
     Namen von Variablen
-
-[^2]: oder einem anderen Block

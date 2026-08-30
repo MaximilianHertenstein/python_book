@@ -18,8 +18,8 @@ Variante der Funktion `yard_to_inch` *Zuweisungsstatements* verwendet.
 
 ``` python, py-execute
 def yard_to_inch(length_in_yard: int) -> int:
-    length_in_feet = yard_to_feet(length_in_yard)
-    length_in_inch = feet_to_inch(length_in_feet)
+    length_in_feet = 3* length_in_yard
+    length_in_inch = 12 * length_in_feet
     return length_in_inch
 ```
 
@@ -131,3 +131,7 @@ f(5)
 
 Bei diesem Aufruf überdeckt die *lokale Variable* `x` mit dem *Wert*
 *5* die *globale Variable* `x` mit dem *Wert* *3*.
+
+
+
+[^2]: oder einem anderen Block
