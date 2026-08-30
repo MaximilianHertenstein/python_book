@@ -122,66 +122,8 @@ Variablen verwendet werden.
 
 
 
-## Funktionen prüfen
 
-Bisher haben wir, um zu sehen, ob eine Funktion korrekt arbeitet, diese
-in der Shell aufgerufen.
 
-Dies kann man aber auch mit `assert`-*Statements* erreichen. Dafür
-schreiben wir hinter das Schlüsselwort `assert` einen Funktionsaufruf,
-den *Gleichheitsoperator* `==` und den Wert, den wir erwarten. Wenn der
-Funktionsaufruf zu dem angegeben *Wert* ausgewertet wird, passiert
-nichts.
-
-``` python, py-execute
-assert yard_to_inch(2) == 72
-```
-
-Wenn dies nicht der Fall ist, wird ein `AssertionError` angezeigt.
-
-``` python, py-execute
-assert yard_to_inch(2) == 10
-```
-
-Es ist sinnvoll, solche Überprüfungen selbst in eine Funktion
-auszulagern.
-
-``` python, py-execute
-def test_yard_to_inch():
-    assert yard_to_inch(1) == 36
-    assert yard_to_inch(2) == 72
-    assert yard_to_inch(3) == 108
-```
-
-``` python, py-execute
-test_yard_to_inch()
-```
-
-Da hier kein `AssertionError` angezeigt wurde, hat die Funktion den Test
-bestanden.
-
-## Funktionen mit mehreren Parametern
-
-Funktionen können auch mehrere oder gar keine *Parameter* haben. Die
-*Parameter* stehen in den runden Klammern hinter dem Funktionsnamen.
-Zwischen zwei *Parameter* schreibt man ein Komma.
-
-``` python, py-execute
-def constant_zero() -> int:
-    return 0
-    
-def sum_of_squares(p_a: int, p_b: int) -> int:
-    return p_a * p_a + p_b * p_b
-```
-
-Beim Aufruf der Funktion muss dann die entsprechende Anzahl an
-*Argumenten* in Klammern übergeben werden. Auch die *Argumente* werden
-durch Kommas voneinander getrennt.
-
-``` python, py-execute
-constant_zero()
-sum_of_squares(2, 3)
-```
 
 [^1]: Für die Namen von Funktionen gelten die selben Regeln wie für die
     Namen von Variablen

@@ -8,20 +8,17 @@ finden.
 def double(x: int) -> int:
     return 2 * x
 
-
-def square(x: int) -> int:
+def square(x: int) -> int
     return x * x
 ```
 
-Deshalb zeigt Python beim Ausführen genau an, in welcher Zeile der Fehler aufgetreten ist.
+Deshalb zeigt Python in der ersten Zeile einer Fehlermeldung genau an, in welcher Zeile der Fehler aufgetreten ist.
 
 ```
-Traceback (most recent call last):
-<span style="color: red">line 4</span> 
-def square(x: int)  -> int
-                          ^
+File "<exec>", line 4
+    def square(x: int) -> int
+                             ^
 SyntaxError: expected ':'
 ```
 
-Darunter wird angezeigt, an
-welcher Stelle welches Zeichen erwartet wurde.
+Darunter wird angezeigt, an welcher Stelle welches Zeichen erwartet wurde.
