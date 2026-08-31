@@ -2,20 +2,17 @@
 
 ## Wiederholung
 
-
-Wir haben bereits gesehen wie wir Funktionen definieren können.
+Wir haben bereits gesehen, wie wir Funktionen definieren können.
 
 ``` python, py-execute
-def yard_to_feet(lengt_in_yard: int):
-    return 3 * lengt_in_yard
+def yard_to_feet(length_in_yard: int) -> int:
+    return 3 * length_in_yard
 
-def feet_to_inch(lengt_in_feet: int):
-    return 12 * lengt_in_feet
+def feet_to_inch(length_in_feet: int) -> int:
+    return 12 * length_in_feet
 ```
 
-
 ## Funktionsaufrufe und Ausdrücke
-
 
 Funktionsaufrufe können in *Ausdrücken* verwendet werden.
 
@@ -23,7 +20,7 @@ Funktionsaufrufe können in *Ausdrücken* verwendet werden.
 12 * yard_to_feet(7)
 ```
 
-Das *Argument* einer Funktion kann jeder beliebige Audruck sein.
+Das *Argument* einer Funktion kann ein beliebiger *Ausdruck* sein.
 
 ``` python, py-execute
 yard_to_feet(2 * 2)
@@ -35,7 +32,7 @@ Ergebnis `4` wird dann an die Funktion übergeben.
 ## Funktionen kombinieren
 
 In einem *Ausdruck* können wir auch mehrere Funktionsaufrufe
-kombinieren. Z. B. können wir mit dem folgenden Aufruf *7* Yard in
+kombinieren. Zum Beispiel können wir mit dem folgenden Aufruf *7* Yard in
 Zoll umrechnen.
 
 ``` python, py-execute

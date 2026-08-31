@@ -20,7 +20,7 @@ aneinandergehängt.
 
 Hierbei ist es egal, dass die *Strings* im letzten Beispiel Zahlen
 darstellen. Durch die Hochkommas handelt es sich zum Beispiel bei
-`'123'` um ein *String* und **nicht** um einen *Integer*. Wir
+`'123'` um einen *String* und **nicht** um einen *Integer*. Wir
 können damit also keine *Integer*-Addition durchführen.
 
 Eine *Operation*, die mit einem *String* und einem *Integer* ausgeführt

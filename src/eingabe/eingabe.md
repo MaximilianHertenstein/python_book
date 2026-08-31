@@ -3,8 +3,10 @@
 
 ## Motivation
 
-Die Funktionen die wir bisher geschrieben haben, haben wir im Code die notwendigen Argumente übergeben.
-Im folgenden Beispiel wird der String `'Wie heißt du? '` an die Funktion `greet_bavarian_print` übergeben.
+Die Funktionen, die wir bisher geschrieben haben, haben wir im Code die
+notwendigen Argumente übergeben. Im folgenden Beispiel wird der String
+`'Wie heißt du? '` an die Funktion `greet_bavarian_print` übergeben.
+
 <script type="py-editor">
 def greet_bavarian_print(name: str) -> str:
     print('Servus ' + name)
@@ -12,20 +14,20 @@ def greet_bavarian_print(name: str) -> str:
 greet_bavarian_print('Ada')
 </script>
 
-Wenn eine andere Person begrüßt werden soll, muss `Ada` durch einen anderen Namen ersetzt werden.
-Dafür muss man schon einiges über Programmierung wissen.
+Wenn eine andere Person begrüßt werden soll, muss `Ada` durch einen
+anderen Namen ersetzt werden. Dafür muss man schon einiges über
+Programmierung wissen.
 
-
-Schöner und nutzerfreundlicher wäre es natürlich, wenn der Benutzer nach seinem Namen gefragt wird. In diesem Kapitel lernst du, wie das funktioniert.
-
+Schöner und nutzerfreundlicher wäre es natürlich, wenn der Benutzer nach
+seinem Namen gefragt wird. In diesem Kapitel lernst du, wie das
+funktioniert.
 
 ## Einlesen von Eingaben mit `input`
 
-
-Mit der Funktion `input` können Benutzereingaben eingelesen werden. Die Funktion hat keine Parameter. Bei der
-Ausführung  wird
-auf Eingabe des Benutzers gewartet.  Er muss dann etwas eingeben und dies mit
-Enter bestätigen. Die Eingabe wird als *String* zurückgegeben.
+Mit der Funktion `input` können Benutzereingaben eingelesen werden. Die
+Funktion hat keine Parameter. Bei der Ausführung wird auf die Eingabe des
+Benutzers gewartet. Er muss dann etwas eingeben und dies mit Enter
+bestätigen. Die Eingabe wird als *String* zurückgegeben.
 
 ``` python, py-execute
 input()
@@ -34,7 +36,7 @@ input()
 **Beispiel**: Eingabe von *Grace*
 ![funktionsaufruf_input](../eingabe/funktionsaufruf_input_ohne_parameter.svg)
 
-Es ist oft sinnvoll diesen *Rückgabewert* in einer *Variablen* zu
+Es ist oft sinnvoll, diesen *Rückgabewert* in einer *Variablen* zu
 speichern, um ihn später verwenden zu können.
 
 ``` python, py-execute
@@ -74,7 +76,7 @@ Funktion in einem Skript aufgerufen wird, etwas zu sehen ist.
 
 
 
-Das Programm kannst du im folgenen Block testen
+Das Programm kannst du in folgendem Block testen:
 <script type="py" terminal worker>
 name = await input("Wie heißt du? ")
 print("Servus " + name)

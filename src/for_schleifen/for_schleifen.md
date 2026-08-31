@@ -2,8 +2,7 @@
 
 ## Motivation
 
-
-Mit einer `while`-Schleife können wir folgendermaßen die Zahlen von \\(1\\) bis \\(5\\) durchlaufen.
+Mit einer `while`-Schleife können wir die Zahlen von \(1\) bis \(5\) folgendermaßen durchlaufen.
 
 ``` python, py-execute
 i = 1
@@ -12,8 +11,7 @@ while i <= 5:
     i = i + 1
 ```
 
-Wenn wir die Zahlen von \\(1\\) bis \\(5\\) durchlaufen wollen, müssen wir den Code folgendermaßen anpassen.
-
+Wenn wir die Zahlen von \(1\) bis \(5\) durchlaufen wollen, müssen wir den Code entsprechend anpassen.
 
 ``` python, py-execute
 i = 3
@@ -22,10 +20,8 @@ while i <= 7:
     i = i + 1
 ```
 
-
-Es fällt auf, dass sich im Code außer dem konkreten Anfangswert und den Endwert alles wiederholt.
-Um diese Widerholung zu vermeiden, kann man immer wenn man in Einser-Schritten zählt, eine  `for`-Schleifen nutzen.
-
+Es fällt auf, dass sich im Code außer dem konkreten Anfangs- und Endwert alles wiederholt.
+Um diese Wiederholung zu vermeiden, kann man, wenn man in Einerschritten zählt, eine `for`-Schleife nutzen.
 
 ## Grundlagen
 
@@ -36,18 +32,14 @@ for i in range(3, 8):
     print(i)
 ```
 
-- Hinter `for` ist der Name der Variablen angegeben, die hochgezählt wird(hier: `i`)
-- In den Klammern hinter `range` steht  
-    - der Startwert der Variablen(hier: `3`)
-    - eins mehr als der Wert, den die Variable im Letzten Durchlauf hat(hier: `8`, also wird bis `7` gezählt)
-- Eingerückt darunter stehen die Statements, die bei jedem Schlefendurchlauf wiederholt werden sollen
-- Im Gegensatz zu `while`-Schleifen muss die Variable nicht selbst erhöht werden
+- Hinter `for` ist der Name der Variablen angegeben, die hochgezählt wird (hier: `i`).
+- In den Klammern hinter `range` steht:
+    - der Startwert der Variablen (hier: `3`)
+    - eins mehr als der Wert, den die Variable im letzten Durchlauf hat (hier: `8`, also wird bis `7` gezählt)
+- Eingerückt darunter stehen die Anweisungen, die bei jedem Schleifendurchlauf wiederholt werden sollen.
+- Im Gegensatz zu `while`-Schleifen muss die Variable nicht selbst erhöht werden.
 
-
-
-
-
-## Nochmal Akkumulator-Pattern
+## Noch einmal Akkumulator-Pattern
 
 Oft will man über alle *Schleifendurchläufe* hinweg ein Ergebnis
 aufsammeln. Hierfür legt man vor dem Durchlaufen der *Schleife* eine

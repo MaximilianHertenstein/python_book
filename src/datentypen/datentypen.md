@@ -2,7 +2,7 @@
 
 # Datentypen
 
-## Einteilung von Werten in Datentpyen
+## Einteilung von Werten in Datentypen
 
 Wir haben mit *Integern* und *Strings* zwei verschiedene Arten von
 *Werten* kennengelernt und gesehen, dass mit verschiedenen Arten von
@@ -14,9 +14,9 @@ kennenlernen werden, sind in der folgenden Abbildung dargestellt.
 ![datentypen_grafik](datentypen_grafik/datentypen_grafik.svg)
 
 `str` steht für *String*, und `int` für *Integer*. Diese Abkürzungen
-haben wir schon genutzt, um zu kennzeichnen, zu welchem Datentyp die *Argumente* und
-der Rückgabewert einer Funktion gehören. Die weiteren *Typen*
-werden wir in den folgenden Kapiteln kennenlernen.
+haben wir schon genutzt, um zu kennzeichnen, zu welchem Datentyp die
+*Argumente* und der Rückgabewert einer Funktion gehören. Die weiteren
+*Typen* werden wir in den folgenden Kapiteln kennenlernen.
 
 ## Typfehler
 
@@ -53,8 +53,6 @@ können.
 
 Beim Implementieren einer Funktion haben wir bisher immer angegeben,
 dass man bei einem Funktionsaufruf ein *Integer* als *Argument*
-übergeben muss und dass sie ein *Integer* zurückgibt.
-
 ``` python, py-execute
 def square(x: int) -> int:
     return x * x

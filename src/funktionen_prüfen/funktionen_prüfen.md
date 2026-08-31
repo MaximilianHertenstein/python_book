@@ -6,7 +6,7 @@ in der Shell aufgerufen.
 Dies kann man aber auch mit `assert`-*Statements* erreichen. Dafür
 schreiben wir hinter das Schlüsselwort `assert` einen Funktionsaufruf,
 den *Gleichheitsoperator* `==` und den Wert, den wir erwarten. Wenn der
-Funktionsaufruf zu dem angegeben *Wert* ausgewertet wird, passiert
+Funktionsaufruf zu dem angegebenen *Wert* ausgewertet wird, passiert
 nichts.
 
 ``` python, py-execute

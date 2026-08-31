@@ -6,7 +6,7 @@
 
 Wir haben gesehen, dass ein *String* aus einzelnen Buchstaben besteht,
 auf die wir zugreifen können. Man sagt auch, dass ein *String* ein
-*Container* ist. Es ist auch für andere *Datentypen* möglich, mehrere
+*Container* ist. Auch für andere *Datentypen* ist es möglich, mehrere
 Werte in einem Container zu speichern. Dafür verwenden wir sogenannte
 *Listen*.
 
@@ -37,7 +37,7 @@ xs
 ```
 
 Außerdem können wir Funktionen schreiben, die *Listen* als *Argumente*
-entgegen nehmen, und/oder eine *Liste* zurückgeben.
+entgegennehmen und/oder eine *Liste* zurückgeben.
 
 ``` python, py-execute
 def repeat_three_times(xs: list[bool]) -> list[bool]:
@@ -84,8 +84,8 @@ xs
 In den nächsten Abschnitten werden wir *Listen* als Container benutzen,
 so wie wir das schon mit *Strings* getan haben.
 
-Auch die Elemente einer *Liste* haben *Indizes*, die mit \\(`0`\\) beginnen.
-Die können wir nutzen, um auf diese Elemente zuzugreifen.
+Auch die Elemente einer *Liste* haben *Indizes*, die mit \(`0`\) beginnen.
+Diese können wir nutzen, um auf diese Elemente zuzugreifen.
 
 ![grafik_listen](grafik_listen/grafik_listen.svg)
 ``` python, py-execute
@@ -101,8 +101,8 @@ x = ['hello', 'how', 'are', 'you']
 x[3]
 ```
 
-Die *Indizes* der *Liste* `[True, False, True]` gehen nur von \\(`0`\\) bis
-\\(`2`\\). Wenn wir einen *Index* über \\(`2`\\) verwenden, erhalten wir einen
+Die *Indizes* der *Liste* `[True, False, True]` gehen nur von \(`0`\) bis
+\(`2`\). Wenn wir einen *Index* über \(`2`\) verwenden, erhalten wir einen
 `IndexError`.
 
 ``` python, py-execute
@@ -117,7 +117,7 @@ Die Länge einer *Liste* kann mit der Funktion `len` bestimmt werden.
 len([True, False, True])
 ```
 
-Da die *Indizes* einer *Liste* bei \\(`0`\\) anfangen, ist der höchste
+Da die *Indizes* einer *Liste* bei \(`0`\) anfangen, ist der höchste
 *Index* um eins kleiner als die Länge.
 
 ## Iteration über Indizes
@@ -132,7 +132,7 @@ for i in range(0, len(xs)):
     print(xs[i])
 ```
 
-Wenn man den Start und Endwert der Zahlervariablen anpasst, kann man
+Wenn man den Start- und Endwert der Zählervariablen anpasst, kann man
 auch nur über einen Teil der Liste iterieren.
 
 ``` python, py-execute
