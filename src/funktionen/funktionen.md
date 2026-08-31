@@ -85,7 +85,6 @@ Anschließend kann sie folgendermaßen im Code aufgerufen werden:
 
 ``` python, py-execute
 yard_to_feet(7)
-yard_to_feet(19)
 ```
 
 1.  Eine Funktionsdefinition beginnt immer mit dem Schlüsselwort `def`.
@@ -120,6 +119,12 @@ Schlüsselwörter wie `def` und `return` zeigen dem Python-Interpreter,
 was zu tun ist. Sie dürfen deshalb **nicht** als Name von Funktionen und
 Variablen verwendet werden.
 
+
+Beim Aufruf schreibt man nur den Namen der Funktion und in Klammern den Wert, den man der Funktion übergibt.
+
+``` python, py-execute
+yard_to_feet(7)
+```
 
 
 
