@@ -1,7 +1,4 @@
-``` python, py-execute
-def set_first_false(xs: list[bool]) -> None:
-    xs[0] = False
-```
+
 
 # Listen verändern
 
@@ -45,6 +42,8 @@ xs = [True, False, True]
 
 ``` python, py-execute
 xs[2] = False
+```
+``` python, py-execute
 xs
 ```
 
@@ -59,6 +58,8 @@ wenn wir zwei *Variablen* erstellen, die auf denselben *Wert* verweisen.
 
 ``` python, py-execute
 xs = [True, False, True]
+```
+``` python, py-execute
 ys = xs
 ```
 
@@ -83,7 +84,11 @@ def set_first_false(xs: list[bool]) -> None:
 
 ``` python, py-execute
 xs = [True, True]
+```
+``` python, py-execute
 set_first_false(xs)
+```
+``` python, py-execute
 xs
 ```
 

@@ -1,7 +1,4 @@
-``` python, py-execute
-def repeat_three_times(xs: list[int]) -> list[int]:
-    return xs + xs + xs
-```
+
 
 # Listen
 
@@ -59,6 +56,7 @@ Bei der *Typannotation* schreibt man `list` und in eckigen Klammern den
 Listen können mit `for`-Schleifen durchlaufen werden.
 
 ``` python, py-execute
+xs = [True, False]
 for x in xs:
     print(x)
 ```
