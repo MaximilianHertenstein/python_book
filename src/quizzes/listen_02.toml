@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie fügt man einer Liste ein neues Element hinzu, ohne die Methode append zu verwenden?"
+prompt.distractors = [
+  "Mit `xs[neu] = Element`.",
+  "Man kann Listen nur bei der Erstellung befüllen.",
+  "Mit `xs - [Element]`."
+]
+answer.answer = "Indem man die Variable mit einer neuen Liste überschreibt, z. B. `xs = xs + [Element]`."
+context = "Ohne append kann man eine Liste erweitern, indem man sie durch eine neue, zusammengesetzte Liste ersetzt."
+id = "1c2d3e4f-3e3d-4a3a-9e2a-9d1f6b7a4c32"

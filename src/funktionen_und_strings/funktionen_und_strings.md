@@ -121,3 +121,7 @@ Auch der Funktionsname `greet_bavarian` ist ein Name, der benötigt wird,
 wenn die Funktion aufgerufen wird. Die Funktion ist aber **nicht** der
 *String* `'greet_bavarian'`. Deshalb muss ihr Name auch nicht zwischen
 Hochkommas geschrieben werden.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./funktionen_und_strings_aufgaben.md)

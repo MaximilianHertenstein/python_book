@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `yard_to_feet(7)` zurück, wenn die Funktion `return 3 * length_in_yard` enthält?"
+prompt.distractors = [
+  "`21` wird nur angezeigt, aber nicht zurückgegeben.",
+  "`length_in_yard` bleibt als Text im Ergebnis stehen.",
+  "Es entsteht ein Fehler, weil `7` kein gültiger Parametername ist."
+]
+answer.answer = "`21`, weil `length_in_yard` beim Funktionsaufruf durch den Wert `7` ersetzt wird."
+context = "Beim Funktionsaufruf wird der Parameter im Funktionskörper durch das übergebene Argument ersetzt."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c22"

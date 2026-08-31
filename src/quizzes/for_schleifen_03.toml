@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen einer for-Schleife und einer while-Schleife bezüglich der Zählervariable?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied.",
+  "for-Schleifen können keine Zählervariable haben.",
+  "Bei while-Schleifen wird die Variable automatisch erhöht, bei for-Schleifen nicht."
+]
+answer.answer = "Bei einer for-Schleife wird die Variable automatisch erhöht, bei einer while-Schleife muss man das selbst im Schleifenkörper tun."
+context = "Das automatische Hochzählen ist einer der Hauptvorteile von for-Schleifen gegenüber while-Schleifen."
+id = "8f9a0b1c-0e3d-4a3a-9e2a-9d1f6b7a1c03"

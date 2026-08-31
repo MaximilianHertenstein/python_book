@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `return` und `print` in einer Funktion?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide zeigen einen Wert an.",
+  "`print` gibt einen Wert zurück, der weiterverwendet werden kann, `return` nicht.",
+  "`return` zeigt einen Wert nur in der Konsole an, ohne die Funktion zu verlassen."
+]
+answer.answer = "`return` gibt einen Wert zurück, der z. B. in einer Rechnung verwendet werden kann. `print` zeigt nur einen Wert an und verlässt die Funktion nicht automatisch."
+context = "Ein zurückgegebener Wert kann weiterverwendet werden, eine Ausgabe mit print nicht."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c12"

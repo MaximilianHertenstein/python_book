@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn vor `for i in range(1, 4): sum_value = sum_value + i` die Zeile `sum_value = 0` fehlt?"
+prompt.distractors = [
+  "sum_value beginnt automatisch bei 1.",
+  "Die Schleife läuft trotzdem fehlerfrei durch.",
+  "Es wird automatisch 0 als Ergebnis angezeigt."
+]
+answer.answer = "Es entsteht ein NameError, weil sum_value verwendet wird, bevor es initialisiert wurde."
+context = "Ein Akkumulator muss immer vor der Schleife mit einem Startwert initialisiert werden."
+id = "8f9a0b1c-0e3d-4a3a-9e2a-9d1f6b7a1c04"

@@ -65,3 +65,7 @@ for i in range(1, 4):
     print("Zeile 6: i = " + str(i) + " total = " + str(total))
 print(total)
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./for_schleifen_aufgaben.md)

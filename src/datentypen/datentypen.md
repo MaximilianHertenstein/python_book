@@ -113,3 +113,7 @@ werden.
 ``` python, py-execute
 int('hello')
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./datentypen_aufgaben.md)

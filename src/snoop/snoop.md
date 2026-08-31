@@ -11,3 +11,7 @@ def count_to_four_and_say_goodbye():
 
 count_to_four_and_say_goodbye()
 </script>
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./snoop_aufgaben.md)

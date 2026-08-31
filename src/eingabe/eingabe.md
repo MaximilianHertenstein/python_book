@@ -84,3 +84,7 @@ print("Servus " + name)
 
 Der Benutzer des Programms muss das Programm nur starten, um mit ihm zu
 interagieren. Er muss selbst aber nichts über Programmierung wissen.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./eingabe_aufgaben.md)

@@ -22,3 +22,7 @@ SyntaxError: expected ':'
 ```
 
 Darunter wird angezeigt, an welcher Stelle welches Zeichen erwartet wurde.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./syntaxfehler_aufgaben.md)

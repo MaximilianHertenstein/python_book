@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "In welcher Reihenfolge gibt `for char in \"hi\": print(char)` die Buchstaben aus?"
+prompt.distractors = [
+  "Zuerst 'i', dann 'h'.",
+  "Beide Buchstaben gleichzeitig in einer Zeile.",
+  "Nur den ersten Buchstaben 'h'."
+]
+answer.answer = "Zuerst 'h', dann 'i', in der Reihenfolge, in der die Buchstaben im String stehen."
+context = "Eine for-Schleife durchläuft die Zeichen eines Strings immer von links nach rechts."
+id = "9a0b1c2d-1e3d-4a3a-9e2a-9d1f6b7a2c14"

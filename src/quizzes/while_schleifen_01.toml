@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn die Bedingung einer while-Schleife von Anfang an False ist?"
+prompt.distractors = [
+  "Die Schleife wird trotzdem einmal ausgeführt.",
+  "Es entsteht ein Fehler.",
+  "Python überspringt das ganze restliche Programm."
+]
+answer.answer = "Der Schleifenkörper wird kein einziges Mal ausgeführt."
+context = "Wie bei einem if-Statement wird der eingerückte Code nur ausgeführt, wenn die Bedingung True ist."
+id = "5c6d7e8f-7e3d-4a3a-9e2a-9d1f6b7a8c71"

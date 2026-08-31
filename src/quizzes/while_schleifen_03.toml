@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gehört zum Schleifenkörper einer while-Schleife?"
+prompt.distractors = [
+  "Nur die erste eingerückte Zeile.",
+  "Alle Zeilen des restlichen Programms.",
+  "Nur Zeilen, die eine Zuweisung enthalten."
+]
+answer.answer = "Alle Zeilen, die direkt unter der Kopfzeile der Schleife eingerückt sind."
+context = "Die Einrückung bestimmt, welche Zeilen bei jedem Schleifendurchlauf wiederholt werden."
+id = "5c6d7e8f-7e3d-4a3a-9e2a-9d1f6b7a8c73"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was macht der Operator `not`?"
+prompt.distractors = [
+  "Er vergleicht zwei Werte auf Ungleichheit.",
+  "Er verbindet zwei boolesche Ausdrücke.",
+  "Er wandelt eine Zahl in ihr Gegenteil (negative Zahl) um."
+]
+answer.answer = "Er kehrt einen booleschen Wert um: aus `True` wird `False` und umgekehrt."
+context = "not ist eine Verneinung und wirkt nur auf einen einzelnen booleschen Ausdruck."
+id = "1e2f3a4b-3e3d-4a3a-9e2a-9d1f6b7a4c34"

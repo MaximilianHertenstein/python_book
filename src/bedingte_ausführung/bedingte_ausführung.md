@@ -91,3 +91,7 @@ return 'Failed'
 
 ausgeführt. Das funktioniert wie oben erklärt.
 
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./bedingte_ausführung_aufgaben.md)
+

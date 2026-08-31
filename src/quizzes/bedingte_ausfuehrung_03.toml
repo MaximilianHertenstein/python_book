@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum wird bei mehreren `if`-Statements hintereinander nach dem ersten erfolgreichen `return` nicht mehr weitergeprüft?"
+prompt.distractors = [
+  "Weil Python nur ein if pro Funktion erlaubt.",
+  "Weil alle folgenden if automatisch übersprungen werden, egal was drinsteht.",
+  "Weil return eine Fehlermeldung auslöst."
+]
+answer.answer = "Weil return die Funktion sofort verlässt, sodass der restliche Code der Funktion nicht mehr ausgeführt wird."
+context = "Sobald ein return-Statement ausgeführt wird, endet die Funktion sofort."
+id = "2f3a4b5c-4e3d-4a3a-9e2a-9d1f6b7a5c43"

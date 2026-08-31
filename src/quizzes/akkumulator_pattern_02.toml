@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum muss ein Akkumulator vor der Schleife initialisiert werden?"
+prompt.distractors = [
+  "Weil sonst die Schleife nicht startet.",
+  "Weil sonst kein print-Statement funktioniert.",
+  "Weil Variablen in Schleifen automatisch mit 1 beginnen."
+]
+answer.answer = "Weil die Variable schon vor dem ersten Schleifendurchlauf einen Startwert (z. B. 0) haben muss, um im Schleifenkörper korrekt weiterverwendet zu werden."
+context = "Ohne Initialisierung würde der erste Zugriff auf den Akkumulator im Schleifenkörper einen NameError erzeugen."
+id = "7e8f9a0b-9e3d-4a3a-9e2a-9d1f6b7a0c92"

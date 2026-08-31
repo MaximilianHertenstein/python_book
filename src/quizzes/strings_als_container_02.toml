@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `'hello'[5]` zurück?"
+prompt.distractors = [
+  "Den letzten Buchstaben 'o'.",
+  "Einen leeren String.",
+  "Die Zahl 5."
+]
+answer.answer = "Einen IndexError, weil der höchste gültige Index bei 'hello' 4 ist."
+context = "Da die Indizierung bei 0 beginnt, ist der höchste gültige Index immer um eins kleiner als die Länge des Strings."
+id = "0b1c2d3e-2e3d-4a3a-9e2a-9d1f6b7a3c22"

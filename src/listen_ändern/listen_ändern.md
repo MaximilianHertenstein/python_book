@@ -93,3 +93,7 @@ xs
 ```
 
 ![variablen_xs_ys_nach_änderung](variablen_xs_ys_nach_änderung/variablen_xs_ys_nach_änderung.svg)
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./listen_aendern_aufgaben.md)

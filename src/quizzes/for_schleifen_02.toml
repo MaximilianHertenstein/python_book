@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Bis zu welcher Zahl zählt `for i in range(3, 8)` tatsächlich?"
+prompt.distractors = [
+  "Bis 8.",
+  "Bis 9.",
+  "Bis 3."
+]
+answer.answer = "Bis 7, weil die Variable beim letzten Durchlauf immer eins kleiner als der zweite Wert in range ist."
+context = "range(3, 8) erzeugt die Werte 3, 4, 5, 6, 7 - die 8 selbst wird nicht mehr erreicht."
+id = "8f9a0b1c-0e3d-4a3a-9e2a-9d1f6b7a1c02"

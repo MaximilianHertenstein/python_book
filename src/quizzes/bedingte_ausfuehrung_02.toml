@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `test_result(49)` zurück, wenn die Funktion nur `if points >= 50: return 'Passed'` enthält und danach kein weiteres return?"
+prompt.distractors = [
+  "Die Funktion gibt automatisch `'Failed'` zurück.",
+  "Es entsteht ein Fehler, weil kein return erreicht wird.",
+  "Die Funktion gibt `49` zurück."
+]
+answer.answer = "Die Funktion gibt `None` zurück, weil kein return-Statement erreicht und ausgeführt wird."
+context = "Wenn die Bedingung nicht erfüllt ist und kein weiteres return folgt, gibt die Funktion automatisch None zurück."
+id = "2f3a4b5c-4e3d-4a3a-9e2a-9d1f6b7a5c42"

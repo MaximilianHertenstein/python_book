@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen der Zählervariable (z. B. x) und dem Akkumulator (z. B. total) in einer Summenschleife?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide zählen dasselbe.",
+  "Die Zählervariable speichert das Endergebnis, der Akkumulator nur den aktuellen Schritt.",
+  "Der Akkumulator wird nie verändert, nur die Zählervariable."
+]
+answer.answer = "Die Zählervariable durchläuft die einzelnen Werte, der Akkumulator sammelt daraus über alle Durchläufe ein Ergebnis."
+context = "Beide Variablen haben unterschiedliche Aufgaben: eine zählt, die andere sammelt das Ergebnis."
+id = "7e8f9a0b-9e3d-4a3a-9e2a-9d1f6b7a0c94"

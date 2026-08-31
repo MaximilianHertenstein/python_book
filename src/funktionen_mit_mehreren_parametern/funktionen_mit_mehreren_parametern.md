@@ -23,3 +23,7 @@ constant_zero()
 
 sum_of_squares(2, 3)
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./funktionen_mit_mehreren_parametern_aufgaben.md)

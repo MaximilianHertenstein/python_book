@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum muss ein Benutzer eines fertigen Programms nichts über Programmierung wissen, obwohl `input` und `print` verwendet werden?"
+prompt.distractors = [
+  "Weil input() automatisch alle Fehler korrigiert.",
+  "Weil print() den Quellcode anzeigt.",
+  "Weil das Programm die Eingabe selbst programmiert."
+]
+answer.answer = "Weil das Programm mit print() erklärt, was einzugeben ist, und mit input() die Eingabe entgegennimmt, ohne dass der Code sichtbar ist."
+context = "print und input sorgen zusammen dafür, dass ein Skript interaktiv genutzt werden kann, ohne dass der Nutzer den Code sieht oder versteht."
+id = "0d1e2f3a-2e3d-4a3a-9e2a-9d1f6b7a3c24"

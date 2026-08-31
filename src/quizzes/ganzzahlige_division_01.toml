@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was berechnet der Operator `//`?"
+prompt.distractors = [
+  "Das exakte Ergebnis der Division mit Nachkommastellen.",
+  "Den Rest einer Division.",
+  "Das Produkt aus Dividend und Divisor."
+]
+answer.answer = "Den ganzzahligen Quotienten einer Division, also die größte ganze Zahl, die nicht größer als das genaue Ergebnis ist."
+context = "// berechnet den Quotienten der ganzzahligen Division, ohne Nachkommastellen."
+id = "4f5a6b7c-6e3d-4a3a-9e2a-9d1f6b7a7c61"

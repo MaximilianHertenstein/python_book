@@ -70,3 +70,7 @@ sehr viele Beispiele übertragen.
 - Akkumulator initialisieren
 - Schleife durchlaufen und Akkumulator in der Schleife anpassen
 - Der Akkumulator enthält jetzt das korrekte Ergebnis
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./akkumulator_pattern_aufgaben.md)

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welchen Index hat das erste Element einer Liste?"
+prompt.distractors = [
+  "1",
+  "-1",
+  "Es kommt auf die Länge der Liste an."
+]
+answer.answer = "0, genau wie bei Strings beginnt die Indizierung bei 0."
+context = "Listen und Strings werden in Python auf dieselbe Weise indiziert, beginnend bei 0."
+id = "1c2d3e4f-3e3d-4a3a-9e2a-9d1f6b7a4c33"

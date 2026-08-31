@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welchen Wert hat `char` beim ersten Durchlauf von `for char in \"hello\":`?"
+prompt.distractors = [
+  "Der gesamte String `'hello'`.",
+  "Die Zahl `0`.",
+  "Der letzte Buchstabe `'o'`."
+]
+answer.answer = "`'h'`, den ersten Buchstaben des Strings."
+context = "Eine for-Schleife über einen String durchläuft die Buchstaben von links nach rechts, beginnend beim ersten Zeichen."
+id = "9a0b1c2d-1e3d-4a3a-9e2a-9d1f6b7a2c11"

@@ -59,3 +59,7 @@ int(10.7)
 
 Bei einer *Konvertierung* von *Floats* zu *Integern* wird immer
 abgerundet.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./floats_aufgaben.md)

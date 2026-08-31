@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `xs[2] = False`?"
+prompt.distractors = [
+  "Es wird ein neues Element an Position 2 eingefügt, alle folgenden rücken nach hinten.",
+  "Es entsteht ein Fehler, weil man Listenelemente nicht ändern kann.",
+  "Die gesamte Liste wird durch False ersetzt."
+]
+answer.answer = "Das Element an Index 2 wird direkt durch False ersetzt, die Länge der Liste bleibt gleich."
+context = "Bei der Zuweisung an einen Index wird nur genau dieses eine Element ersetzt."
+id = "2d3e4f5a-4e3d-4a3a-9e2a-9d1f6b7a5c42"

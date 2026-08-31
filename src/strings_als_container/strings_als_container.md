@@ -85,3 +85,7 @@ greeting = 'hello'
 for i in range(1, len(greeting) - 1):
     print(greeting[i])
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./strings_als_container_aufgaben.md)

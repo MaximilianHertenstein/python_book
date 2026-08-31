@@ -152,4 +152,8 @@ Eine andere Auswertungsreihenfolge kann durch das Setzen von Klammern erreicht w
 (True or False) and False
 ```
 
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./booleans_aufgaben.md)
+
 

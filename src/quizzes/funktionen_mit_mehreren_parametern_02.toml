@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `sum_of_squares(2, 3)` zurück, wenn die Funktion `return p_a * p_a + p_b * p_b` enthält?"
+prompt.distractors = [
+  "Es wird nur `p_a * p_a` berechnet.",
+  "Python addiert automatisch `2 + 3` und ignoriert den Funktionskörper.",
+  "Es entsteht ein Fehler, weil zwei Argumente übergeben wurden."
+]
+answer.answer = "`p_a` wird durch `2` und `p_b` durch `3` ersetzt, das Ergebnis ist `4 + 9 = 13`."
+context = "Jeder Parameter wird beim Funktionsaufruf durch das Argument an der entsprechenden Position ersetzt."
+id = "2b3c4d5e-4e3d-4a3a-9e2a-9d1f6b7a5c42"

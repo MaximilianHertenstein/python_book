@@ -10,3 +10,7 @@ def feet_to_inch(length_in_feet: int) -> int:
 ```
 
 Dies kann genutzt werden, um den Code zu erklären und zu strukturieren.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./kommentare_aufgaben.md)

@@ -76,3 +76,7 @@ looks
 
 Python denkt, dass wir eine *Variable* mit dem Namen `looks` verwenden
 wollen. Eine *Variable* mit diesem Namen ist aber nicht definiert.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./strings_aufgaben.md)

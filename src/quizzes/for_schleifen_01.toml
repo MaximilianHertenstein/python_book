@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was steht in den Klammern hinter `range` bei `for i in range(3, 8)`?"
+prompt.distractors = [
+  "Nur der Endwert der Schleife.",
+  "Die Anzahl der Wiederholungen und der Startwert.",
+  "Zwei Werte, die beide mit durchlaufen werden."
+]
+answer.answer = "Der Startwert und ein Wert, der eins mehr ist als der letzte Wert, den die Variable annimmt."
+context = "Der zweite Wert in range wird selbst nicht mehr erreicht, sondern markiert das Ende des Bereichs."
+id = "8f9a0b1c-0e3d-4a3a-9e2a-9d1f6b7a1c01"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum bricht `while x < 5: print(x)` (ohne Erhöhung von x) niemals ab?"
+prompt.distractors = [
+  "Weil while-Schleifen sich immer nach 5 Durchläufen selbst beenden.",
+  "Weil print die Bedingung automatisch auf False setzt.",
+  "Weil x bei jedem Durchlauf automatisch um 1 sinkt."
+]
+answer.answer = "Weil sich der Wert von x im Schleifenkörper nie ändert und die Bedingung deshalb immer True bleibt."
+context = "Eine while-Schleife bricht nur ab, wenn sich die geprüfte Bedingung irgendwann zu False ändert."
+id = "5c6d7e8f-7e3d-4a3a-9e2a-9d1f6b7a8c72"

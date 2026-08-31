@@ -131,3 +131,7 @@ yard_to_feet(7)
 
 [^1]: Für die Namen von Funktionen gelten die selben Regeln wie für die
     Namen von Variablen
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./funktionen_aufgaben.md)

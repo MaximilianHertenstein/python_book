@@ -136,3 +136,7 @@ Bei diesem Aufruf überdeckt die *lokale Variable* `x` mit dem *Wert*
 
 
 [^2]: oder einem anderen Block
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./variablen_in_funktionen_aufgaben.md)

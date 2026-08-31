@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum erzeugt `looks` (ohne Hochkommas) einen Fehler, wenn keine Variable mit diesem Namen definiert wurde?"
+prompt.distractors = [
+  "Weil `looks` ein reserviertes Schlüsselwort ist.",
+  "Weil Strings ohne Hochkommas automatisch zu Zahlen werden.",
+  "Weil Variablennamen nicht klein geschrieben werden dürfen."
+]
+answer.answer = "Python interpretiert `looks` als Variablennamen. Da keine Variable mit diesem Namen existiert, entsteht ein NameError."
+context = "Ohne Hochkommas wird ein Wort immer als Variablenname interpretiert, nicht als String."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c83"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist das Ergebnis von `10.7 - 12.3` nicht exakt `-1.6`?"
+prompt.distractors = [
+  "Weil Python bei Subtraktion immer aufrundet.",
+  "Weil negative Zahlen in Python nicht unterstützt werden.",
+  "Weil Floats nur mit ganzen Zahlen kombiniert werden dürfen."
+]
+answer.answer = "Weil Kommazahlen im Computer nicht immer exakt dargestellt werden können, wodurch kleine Rundungsfehler entstehen."
+context = "Floats werden intern als Binärzahlen mit begrenzter Genauigkeit gespeichert, was zu kleinen Abweichungen führen kann."
+id = "3e4f5a6b-5e3d-4a3a-9e2a-9d1f6b7a6c52"

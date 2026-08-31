@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum stehen um `'Servus '` Hochkommas, aber nicht um `name` und `greet_bavarian`?"
+prompt.distractors = [
+  "Weil `name` und `greet_bavarian` automatisch als Strings erkannt werden.",
+  "Weil Hochkommas nur bei kurzen Texten nötig sind.",
+  "Weil `'Servus '` ein Parameter ist."
+]
+answer.answer = "Weil `'Servus '` ein fester String-Wert ist, während `name` ein Parametername und `greet_bavarian` ein Funktionsname ist."
+context = "Hochkommas kennzeichnen feste String-Werte. Namen von Parametern und Funktionen stehen nie in Hochkommas."
+id = "7a8b9c0d-9e3d-4a3a-9e2a-9d1f6b7a0c94"

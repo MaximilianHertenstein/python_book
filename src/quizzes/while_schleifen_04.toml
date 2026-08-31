@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit einer Zeile, die nicht mehr eingerückt ist wie der Schleifenkörper?"
+prompt.distractors = [
+  "Sie wird bei jedem Schleifendurchlauf mit ausgeführt.",
+  "Sie wird komplett ignoriert.",
+  "Sie erzeugt automatisch einen Fehler."
+]
+answer.answer = "Sie gehört nicht mehr zur Schleife und wird erst ausgeführt, nachdem die Schleife komplett beendet ist."
+context = "Zeilen außerhalb der Einrückung gehören nicht zum Schleifenkörper und werden nur einmal nach der Schleife ausgeführt."
+id = "5c6d7e8f-7e3d-4a3a-9e2a-9d1f6b7a8c74"

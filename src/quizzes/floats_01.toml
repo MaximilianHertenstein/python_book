@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was für ein Typ ist das Ergebnis von `5 / 2`?"
+prompt.distractors = [
+  "int, weil beide Operanden Integer sind.",
+  "str, weil Kommazahlen als Text gespeichert werden.",
+  "bool, weil das Ergebnis größer als 1 ist."
+]
+answer.answer = "float, weil der Operator / immer eine Kommazahl zurückgibt."
+context = "Der Operator / liefert in Python immer einen Float, auch wenn das Ergebnis eine ganze Zahl wäre."
+id = "3e4f5a6b-5e3d-4a3a-9e2a-9d1f6b7a6c51"

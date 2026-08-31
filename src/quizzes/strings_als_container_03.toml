@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was berechnet `len('hello')`?"
+prompt.distractors = [
+  "Den höchsten gültigen Index des Strings.",
+  "Den ersten Buchstaben des Strings.",
+  "Ob der String leer ist oder nicht."
+]
+answer.answer = "Die Anzahl der Zeichen im String, hier 5."
+context = "len gibt immer die Anzahl der Zeichen zurück, nicht den höchsten Index."
+id = "0b1c2d3e-2e3d-4a3a-9e2a-9d1f6b7a3c23"

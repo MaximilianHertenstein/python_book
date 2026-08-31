@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum funktioniert `3 * 'good bye'`, aber nicht `1 + '2'`?"
+prompt.distractors = [
+  "Weil Multiplikation immer erlaubt ist, Addition aber nie.",
+  "Weil `+` nur für Integer definiert ist und `*` für alle Typen.",
+  "Weil `'2'` keine gültige Zeichenkette ist."
+]
+answer.answer = "Weil die Operation `*` für die Kombination Integer und String definiert ist, `+` aber nicht für Integer und String."
+context = "Operationen sind immer nur für bestimmte Kombinationen von Typen definiert."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c01"

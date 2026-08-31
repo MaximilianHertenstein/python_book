@@ -140,3 +140,7 @@ xs = [True, False, True, False]
 for i in range(1, len(xs) - 1):
     print(xs[i])
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./listen_aufgaben.md)

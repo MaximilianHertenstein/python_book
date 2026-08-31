@@ -148,3 +148,7 @@ Diese Funktion kann sogar noch weiter vereinfacht werden.
 def is_teenager_shorter(age: int) -> bool:
     return age >= 13 and age < 20
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./bedingte_ausführung_2_aufgaben.md)

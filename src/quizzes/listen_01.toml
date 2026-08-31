@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `[True] + [False]`?"
+prompt.distractors = [
+  "Es entsteht ein Fehler, weil man Listen nicht addieren kann.",
+  "Es werden 'True' und 'False' zu einem String verbunden.",
+  "Es entsteht eine Liste mit dem einzigen Wert True."
+]
+answer.answer = "Es entsteht eine neue Liste, die aus beiden Listen zusammengesetzt ist: [True, False]."
+context = "Die Addition von zwei Listen fügt sie aneinander, ähnlich wie bei Strings."
+id = "1c2d3e4f-3e3d-4a3a-9e2a-9d1f6b7a4c31"

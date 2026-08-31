@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `a = 2 * a`, wenn `a` vorher den Wert `2` hatte?"
+prompt.distractors = [
+  "Es entsteht ein Fehler, weil a auf beiden Seiten steht.",
+  "a bleibt unverändert bei 2.",
+  "a wird zu einer Liste mit zwei Einträgen."
+]
+answer.answer = "Zuerst wird die rechte Seite mit dem alten Wert von a berechnet (2 * 2 = 4), danach wird a der neue Wert 4 zugewiesen."
+context = "Bei einer Zuweisung wird immer zuerst die rechte Seite mit den aktuellen Werten berechnet."
+id = "4b5c6d7e-6e3d-4a3a-9e2a-9d1f6b7a7c61"

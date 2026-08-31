@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum darf eine Funktion nicht `return` als Namen haben?"
+prompt.distractors = [
+  "Weil Funktionsnamen immer mit einem Großbuchstaben beginnen müssen.",
+  "Weil `return` ein Datentyp ist.",
+  "Weil Funktionsnamen keine Buchstaben enthalten dürfen."
+]
+answer.answer = "Weil `return` ein Schlüsselwort ist, das der Python-Interpreter für eigene Zwecke reserviert."
+context = "Schlüsselwörter wie `def` und `return` dürfen nicht als Namen von Funktionen oder Variablen verwendet werden."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c23"

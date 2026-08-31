@@ -40,3 +40,7 @@ for char in greeting:
     weird_greeting = char + weird_greeting
 weird_greeting
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./iteration_ueber_strings_aufgaben.md)

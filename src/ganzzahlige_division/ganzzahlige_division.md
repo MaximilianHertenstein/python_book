@@ -26,3 +26,7 @@ Es gilt also
 ``` python, py-execute
 (14 // 5) * 5 + (14 % 5)
 ```
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./ganzzahlige_division_aufgaben.md)

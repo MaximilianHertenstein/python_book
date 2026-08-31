@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Bibliothek snoop?"
+prompt.distractors = [
+  "Um Syntaxfehler automatisch zu reparieren.",
+  "Um Programme schneller auszuführen.",
+  "Um Variablennamen automatisch zu vergeben."
+]
+answer.answer = "Um bei der Ausführung einer Funktion automatisch anzuzeigen, welche Zeilen ausgeführt werden und welche Werte Variablen annehmen."
+context = "snoop protokolliert automatisch die Ausführung einer markierten Funktion Zeile für Zeile."
+id = "6d7e8f9a-8e3d-4a3a-9e2a-9d1f6b7a9c81"

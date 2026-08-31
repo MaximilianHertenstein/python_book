@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `1 == '1'` zurück?"
+prompt.distractors = [
+  "`True`, weil beide dieselbe Zahl darstellen.",
+  "Einen Fehler, weil man Integer nicht mit Strings vergleichen darf.",
+  "`'1'`, weil der String automatisch zurückgegeben wird."
+]
+answer.answer = "`False`, weil ein Integer und ein String nie gleich sein können, auch wenn sie gleich aussehen."
+context = "Werte mit unterschiedlichen Typen können bei einem Vergleich mit == niemals gleich sein."
+id = "1e2f3a4b-3e3d-4a3a-9e2a-9d1f6b7a4c32"

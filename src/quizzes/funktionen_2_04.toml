@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum kann man in einer Funktion eine andere, vorher definierte Funktion aufrufen?"
+prompt.distractors = [
+  "Weil alle Funktionen automatisch miteinander verbunden sind.",
+  "Weil das nur bei gleichnamigen Parametern erlaubt ist.",
+  "Weil Python das nur bei eingebauten Funktionen wie `print` erlaubt."
+]
+answer.answer = "Weil ein Funktionsaufruf ein Ausdruck ist und Ausdrücke im Funktionskörper verwendet werden können."
+context = "Da Funktionsaufrufe Ausdrücke sind, können sie überall dort verwendet werden, wo ein Ausdruck erlaubt ist."
+id = "5e6f7a8b-7e3d-4a3a-9e2a-9d1f6b7a8c74"

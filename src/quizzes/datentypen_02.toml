@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `'3' * 'x'`?"
+prompt.distractors = [
+  "Das Ergebnis ist `'xxx'`.",
+  "Das Ergebnis ist der Integer `3`.",
+  "Python wandelt `'3'` automatisch in eine Zahl um und berechnet damit weiter."
+]
+answer.answer = "Es entsteht ein Fehler, weil man einen String nur mit einem Integer, nicht mit einem weiteren String multiplizieren kann."
+context = "Die Multiplikation von zwei Strings ist in Python nicht definiert."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c02"

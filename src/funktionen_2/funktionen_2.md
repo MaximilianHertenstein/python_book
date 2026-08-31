@@ -61,4 +61,8 @@ def yard_to_inch(length_in_yard: int) -> int:
 yard_to_inch(7)
 ```
 
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./funktionen_2_aufgaben.md)
+
 

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was macht `3 * 'hello '`?"
+prompt.distractors = [
+  "Python multipliziert die Buchstaben mit ihrem Zahlenwert.",
+  "Es entsteht ein Fehler, weil man Strings nicht mit Zahlen multiplizieren darf.",
+  "Der String wird in drei Teile geteilt."
+]
+answer.answer = "Der String `'hello '` wird dreimal wiederholt und aneinandergehängt."
+context = "Die Multiplikation eines Strings mit einem Integer wiederholt den String entsprechend oft."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c82"

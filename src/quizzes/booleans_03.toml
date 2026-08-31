@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie wird `True or False and False` ausgewertet?"
+prompt.distractors = [
+  "Wie `(True or False) and False`, also `False`.",
+  "Von links nach rechts ohne Vorrangregel, also `False`.",
+  "Es entsteht ein Fehler, weil or und and nicht gemischt werden dürfen."
+]
+answer.answer = "Wie `True or (False and False)`, also `True`, weil `and` Vorrang vor `or` hat."
+context = "Für boolesche Ausdrücke gilt die and-vor-or-Regel, ähnlich wie Punkt-vor-Strich bei Rechenausdrücken."
+id = "1e2f3a4b-3e3d-4a3a-9e2a-9d1f6b7a4c33"

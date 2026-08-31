@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum wird bei einem reinen `if`-Statement ohne `else` manchmal ungewollt zusätzlicher Code ausgeführt?"
+prompt.distractors = [
+  "Weil if immer beide Fälle ausführt.",
+  "Weil else Pflicht ist und sonst ein Fehler entsteht.",
+  "Weil Python Code nach if immer zweimal ausführt."
+]
+answer.answer = "Weil print (im Gegensatz zu return) die Funktion nicht verlässt, sodass der Code nach dem if trotzdem ausgeführt wird."
+context = "Ohne return oder else wird der Code nach dem if-Block unabhängig von der Bedingung weiter ausgeführt."
+id = "3a4b5c6d-5e3d-4a3a-9e2a-9d1f6b7a6c51"

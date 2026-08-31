@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn der Funktionsname `yard_to_feet` ohne Klammern geschrieben wird, statt sie mit `yard_to_feet(7)` aufzurufen?"
+prompt.distractors = [
+  "Die Funktion wird trotzdem ausgeführt.",
+  "Es wird automatisch `0` zurückgegeben.",
+  "Python fragt automatisch nach einem Argument."
+]
+answer.answer = "Die Funktion wird nicht aufgerufen. Ohne Klammern findet kein Funktionsaufruf statt."
+context = "Nur mit runden Klammern hinter dem Funktionsnamen wird eine Funktion tatsächlich aufgerufen."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c24"

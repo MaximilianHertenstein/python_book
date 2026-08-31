@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum erzeugt `greet_bavarian_print('Ada') + '!'` einen Fehler, wenn `greet_bavarian_print` nur `print(...)` aber kein `return` verwendet?"
+prompt.distractors = [
+  "Es entsteht kein Fehler, weil print automatisch einen String zurückgibt.",
+  "Der Fehler entsteht, weil `'!'` kein gültiger String ist.",
+  "Der Fehler entsteht, weil zwei print-Aufrufe nicht kombiniert werden dürfen."
+]
+answer.answer = "Ein TypeError, weil der Rückgabewert `None` ist und `None` nicht mit einem String addiert werden kann."
+context = "Der Rückgabewert einer Funktion ohne return ist immer None, unabhängig von der Ausgabe mit print."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c14"

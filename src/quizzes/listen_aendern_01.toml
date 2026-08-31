@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `xs.append(False)`?"
+prompt.distractors = [
+  "Es erzeugt eine komplett neue Liste, die alte bleibt unverändert.",
+  "Es ersetzt das erste Element der Liste durch False.",
+  "Es gibt eine neue Liste zurück, ohne xs zu verändern."
+]
+answer.answer = "Es verändert die Liste xs direkt, indem False am Ende hinzugefügt wird."
+context = "append verändert die vorhandene Liste selbst, im Gegensatz zur Addition von Listen."
+id = "2d3e4f5a-4e3d-4a3a-9e2a-9d1f6b7a5c41"

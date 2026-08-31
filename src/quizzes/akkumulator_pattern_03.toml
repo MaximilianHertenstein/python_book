@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn `total = 0` vergessen wird, bevor die Schleife `total = total + x` durchläuft?"
+prompt.distractors = [
+  "total bekommt automatisch den Wert 0.",
+  "Die Schleife läuft trotzdem korrekt weiter.",
+  "Es wird automatisch die Summe ab 1 berechnet."
+]
+answer.answer = "Es entsteht ein NameError, weil total in `total = total + x` verwendet wird, bevor es definiert wurde."
+context = "Eine Variable muss immer definiert sein, bevor sie in einem Ausdruck gelesen werden kann, auch im Schleifenkörper."
+id = "7e8f9a0b-9e3d-4a3a-9e2a-9d1f6b7a0c93"

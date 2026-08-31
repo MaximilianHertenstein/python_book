@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Funktion `str(number)`?"
+prompt.distractors = [
+  "Sie berechnet die Länge der Zahl.",
+  "Sie rundet die Zahl auf eine Ganzzahl.",
+  "Sie prüft, ob `number` ein gültiger Datentyp ist."
+]
+answer.answer = "Sie wandelt den Wert von `number` in einen String um, sodass er z. B. mit anderen Strings addiert werden kann."
+context = "Mit str und int können Werte zwischen den Datentypen konvertiert werden."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c03"

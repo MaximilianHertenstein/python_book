@@ -220,3 +220,7 @@ def print_hello_and_goodbye() -> None:
 print_hello_and_goodbye()
 ```
 
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./ausgabe_mit_print_aufgaben.md)
+

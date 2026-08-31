@@ -76,3 +76,7 @@ unveränderlich. Das heißt, dass wir zum Beispiel ein *Integer* nicht
 ändern können. Wir haben aber oben gesehen, dass wir den *Wert* einer
 *Variable* einfach durch ein neues *Integer* ersetzen können. Wir werden
 bald *Werte* kennenlernen, die sich verändern lassen.
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./werte_von_variablen_aendern_aufgaben.md)

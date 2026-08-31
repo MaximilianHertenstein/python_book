@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum entsteht bei `def square(x: int) -> int` ohne Doppelpunkt am Ende ein SyntaxError?"
+prompt.distractors = [
+  "Weil Funktionen keine Rückgabewerte haben dürfen.",
+  "Weil `x` kein gültiger Parametername ist.",
+  "Weil `int` nicht als Typ verwendet werden darf."
+]
+answer.answer = "Weil jeder Funktionskopf mit einem Doppelpunkt abgeschlossen werden muss."
+context = "Der Doppelpunkt gehört zur Syntax jedes Funktionskopfes und darf nicht fehlen."
+id = "1a2b3c4d-3e3d-4a3a-9e2a-9d1f6b7a4c33"

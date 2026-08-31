@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum kann eine Funktion eine Liste, die ihr übergeben wird, dauerhaft verändern?"
+prompt.distractors = [
+  "Weil Listen beim Funktionsaufruf automatisch kopiert werden.",
+  "Weil Funktionen grundsätzlich alle globalen Variablen verändern dürfen.",
+  "Weil das nur bei Funktionen mit Rückgabewert None möglich ist."
+]
+answer.answer = "Weil der Parameter auf dieselbe veränderliche Liste zeigt wie das Argument, sodass Änderungen im Funktionskörper auch außerhalb sichtbar sind."
+context = "Listen werden beim Funktionsaufruf nicht kopiert, deshalb wirken sich Änderungen im Funktionskörper auch nach außen aus."
+id = "2d3e4f5a-4e3d-4a3a-9e2a-9d1f6b7a5c44"

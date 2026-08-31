@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie aktiviert man snoop für eine bestimmte Funktion?"
+prompt.distractors = [
+  "Indem man snoop() in der ersten Zeile der Funktion aufruft.",
+  "Indem man den Funktionsnamen in Anführungszeichen setzt.",
+  "Indem man die Funktion zweimal definiert."
+]
+answer.answer = "Indem man die Funktion mit @snoop direkt über dem Funktionskopf markiert (dekoriert)."
+context = "@snoop steht in der Zeile direkt vor def und aktiviert die Protokollierung für genau diese Funktion."
+id = "6d7e8f9a-8e3d-4a3a-9e2a-9d1f6b7a9c82"

@@ -113,3 +113,7 @@ three+three = 6
 
 [^1]: oder ihren Wert zu ändern. Diese Möglichkeit lernen wir jedoch
     erst später kennen
+
+## Aufgaben
+
+[Zu den Aufgaben zu diesem Kapitel](./variablen_aufgaben.md)

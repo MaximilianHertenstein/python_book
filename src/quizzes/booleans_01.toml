@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `2 * 3 == 3 * 2` zurück?"
+prompt.distractors = [
+  "`False`, weil die Reihenfolge der Zahlen unterschiedlich ist.",
+  "Einen Fehler, weil man == nicht mit Rechnungen kombinieren darf.",
+  "`6`, weil beide Seiten zuerst addiert werden."
+]
+answer.answer = "`True`, weil beide Seiten zuerst berechnet werden (`6` und `6`) und danach verglichen werden."
+context = "Vor dem Vergleich werden beide Seiten des == zuerst zu einem Wert ausgewertet."
+id = "1e2f3a4b-3e3d-4a3a-9e2a-9d1f6b7a4c31"

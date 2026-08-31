@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist bei `for i in range(0, len(greeting))` der höchste Wert von i immer ein gültiger Index?"
+prompt.distractors = [
+  "Weil len immer eins zu wenig zurückgibt.",
+  "Weil Indizes in Python bei 1 beginnen.",
+  "Weil range automatisch alle Indizes verdoppelt."
+]
+answer.answer = "Weil range(0, len(greeting)) genau bis len(greeting) - 1 zählt, was dem höchsten gültigen Index entspricht."
+context = "Der zweite Wert von range wird selbst nicht erreicht, deshalb passt er genau zur Länge minus eins."
+id = "0b1c2d3e-2e3d-4a3a-9e2a-9d1f6b7a3c24"
