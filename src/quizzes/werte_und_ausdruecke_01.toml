@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat der Ausdruck `4 + 3`?"
+prompt.distractors = [
+  "43",
+  "1",
+  "7/2"
+]
+answer.answer = "7"
+context = "Bei der Addition werden zwei Werte zusammengezählt."
+id = "22f8ed41-96a8-4c4a-9f7c-e743218e37b6"

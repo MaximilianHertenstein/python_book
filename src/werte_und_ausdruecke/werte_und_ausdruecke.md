@@ -71,3 +71,7 @@ Beispiel eine Zahl, aber sicher kein zweites Rechenzeichen erwarten.
 
 [^1]: Ausdrücke können auch Funktionsaufrufe und Variablen enthalten.
     Diese werden aber erst später behandelt.
+
+## Aufgaben
+
+[Zum Quiz zu diesem Kapitel](./werte_und_ausdruecke_aufgaben.md)

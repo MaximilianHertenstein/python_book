@@ -1,6 +1,7 @@
 # Summary
 
 - [Werte und Ausdrücke](./werte_und_ausdruecke/werte_und_ausdruecke.md)
+- [Quiz zu Werte und Ausdrücke](./werte_und_ausdruecke/werte_und_ausdruecke_aufgaben.md)
 - [Variablen](./variablen/variablen.md)
 - [Funktionen](./funktionen/funktionen.md)
 - [Syntaxfehler](./syntaxfehler/syntaxfehler.md)

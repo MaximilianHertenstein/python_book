@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist ein Wert in Python?"
+prompt.distractors = [
+  "Ein Name einer Variable",
+  "Nur eine Rechnung mit Rechenzeichen",
+  "Ein Befehl, der ausgeführt wird"
+]
+answer.answer = "Die kleinste Einheit, mit der ein Computerprogramm arbeitet, zum Beispiel `4` oder `'Hallo'`."
+context = "Zahlen, Zeichenketten und andere Daten sind Werte."
+id = "1d2be3e0-3959-499b-a18a-9cb2ce9eff7b"

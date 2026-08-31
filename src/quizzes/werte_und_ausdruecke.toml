@@ -1,0 +1,107 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat der Ausdruck `4 + 3`?"
+prompt.distractors = [
+  "43",
+  "1",
+  "7/2"
+]
+answer.answer = "7"
+context = "Bei der Addition werden zwei Werte zusammengezählt."
+id = "605d9321-af33-47f1-965a-3a95ee41b558"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist ein Wert in Python?"
+prompt.distractors = [
+  "Ein Name einer Variable",
+  "Nur eine Rechnung mit Rechenzeichen",
+  "Ein Befehl, der ausgeführt wird"
+]
+answer.answer = "Die kleinste Einheit, mit der ein Computerprogramm arbeitet, zum Beispiel `4` oder `'Hallo'`."
+context = "Zahlen, Zeichenketten und andere Daten sind Werte."
+id = "d5054e00-3399-47a4-bbcb-21f618a90cd6"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis liefert `1 + 2 * 5`?"
+prompt.distractors = [
+  "15",
+  "7",
+  "30"
+]
+answer.answer = "11"
+context = "Die Multiplikation hat in Python Vorrang vor der Addition."
+id = "7361845c-50fc-4ff7-8507-a50a536b9fc3"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum entsteht bei `1 + * 1` ein SyntaxError?"
+prompt.distractors = [
+  "Weil `*` ein Wert ist.",
+  "Weil Python nur `+` und `-` kennt.",
+  "Weil `1` kein gültiger Wert ist."
+]
+answer.answer = "Weil nach dem Operator `+` kein gültiger Operand folgt."
+context = "Ein SyntaxError bedeutet: Der Code ist nicht nach den Regeln der Sprache aufgebaut."
+id = "a7483291-5857-48a8-a4b6-8c806512f164"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat `(1 + 2) * 5`?"
+prompt.distractors = [
+  "11",
+  "7",
+  "25"
+]
+answer.answer = "15"
+context = "Klammern haben Vorrang. Erst wird `1 + 2` berechnet und dann mit `5` multipliziert."
+id = "549af0ee-1a40-4770-b63e-0afa2ec80e2d"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat `5 - 2 * 3`?"
+prompt.distractors = [
+  "9",
+  "6",
+  "0"
+]
+answer.answer = "-1"
+context = "Die Multiplikation wird vor der Subtraktion gerechnet."
+id = "2f548114-264c-47a1-b46e-5c7e96f4f69f"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Ein Schüler schreibt: `2 + 3 * 4 = 20`. Welche Fehlvorstellung steckt dahinter?"
+prompt.distractors = [
+  "Er denkt, Klammern werden immer zuerst ausgewertet.",
+  "Er glaubt, dass Addition und Multiplikation dieselbe Priorität haben.",
+  "Er meint, Python berechnet von rechts nach links."
+]
+answer.answer = "Er rechnet von links nach rechts, obwohl die Multiplikation Vorrang hat."
+context = "Die Reihenfolge der Operatoren ist wichtig."
+id = "864c02f2-027e-44e4-854c-5f3cb865523f"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Ein Ausdruck ist ..."
+prompt.distractors = [
+  "nur eine Zahl",
+  "immer ein Fehler",
+  "nur ein Name einer Variable"
+]
+answer.answer = "eine Kombination aus Werten, Operatoren und Klammern, die zu einem Wert ausgewertet werden kann."
+context = "Ausdrücke können Zahlen, Variablen oder Funktionsaufrufe enthalten."
+id = "0ea256c9-a7c5-4930-a5fa-cdc8ab0c1bd1"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist `(2 + 3) * 4` anders als `2 + 3 * 4`?"
+prompt.distractors = [
+  "Weil `*` und `+` immer dieselbe Reihenfolge haben.",
+  "Weil Python nur bei Klammern mit Zahlen rechnen kann.",
+  "Weil Klammern nur zum Lesen dienen."
+]
+answer.answer = "Weil Klammern die Reihenfolge der Auswertung verändern."
+context = "Klammern können die Priorität der Berechnung beeinflussen."
+id = "c2f7055a-4275-4f13-b53a-84fdf634fc70"

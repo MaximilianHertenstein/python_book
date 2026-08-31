@@ -142,3 +142,8 @@ mpy-editor .cm-lineNumbers {
     background: transparent !important;
     border: 0 !important;
 }
+
+/* Quiz-Seite in der Summary nur als versteckten technischen Eintrag nutzen. */
+#sidebar li:has(a[href$="werte_und_ausdruecke_aufgaben.html"]) {
+    display: none !important;
+}
