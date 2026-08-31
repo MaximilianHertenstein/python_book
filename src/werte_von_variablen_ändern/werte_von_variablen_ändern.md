@@ -7,16 +7,20 @@ Es ist jederzeit möglich, den *Wert* einer *Variablen* mit einer
 
 ``` python, py-execute
 a = 2
+```
+``` python, py-execute
 a
 ```
 
-![variable_a_2](variable_a_2/variable_a_2.svg)
+![variable_a_2](variable_a_2.svg)
 ``` python, py-execute
 a = 5
+```
+``` python, py-execute
 a
 ```
 
-![variable_a_updated_5](variable_a_updated_5/variable_a_updated_5.svg)
+![variable_a_updated_5](variable_a_updated_5.svg)
 
 Auf der rechten Seite einer *Zuweisung* kann jeder *Ausdruck* stehen.
 Insbesondere ist es nach dem *Initialisieren* möglich, in dem *Ausdruck*
@@ -24,6 +28,8 @@ die *Variable* selbst zu verwenden.
 
 ``` python, py-execute
 a = 2 * a
+```
+``` python, py-execute
 a
 ```
 
@@ -34,10 +40,12 @@ Wir können auch *Variablen* erstellen, die auf den *Wert* einer anderen
 
 ``` python, py-execute
 x = 3
+```
+``` python, py-execute
 y = x
 ```
 
-![x_y_3](x_y_3/x_y_3.svg)
+![x_y_3](x_y_3.svg)
 ``` python, py-execute
 y
 ```
@@ -49,9 +57,11 @@ Wenn wir jetzt den *Wert* einer der *Variablen* durch einen anderen
 x = 5
 ```
 
-![x_5_y_3](x_5_y_3/x_5_y_3.svg)
+![x_5_y_3](x_5_y_3.svg)
 ``` python, py-execute
 x
+```
+``` python, py-execute
 y
 ```
 
