@@ -11,7 +11,7 @@ for char in "hello":
 - In der ersten Zeile wird festgelegt, dass die Variable `char` die Zeichen in `"hello"` durchlaufen soll.
   - Beim ersten Durchlauf hat `char` den Wert `"h"`.
   - Beim zweiten Durchlauf hat `char` den Wert `"e"`.
-  - \\(`\vdots`\\)
+  - \\(\vdots\\)
 
 
 - Darunter steht, dass bei jedem Schleifendurchlauf, der Wert der Variable `char` ausgegeben werden soll.
@@ -22,4 +22,4 @@ for char in "hello":
   - Da `char` bei der zweiten Ausführung des Schleifenkörpers den Wert
     `"e"` hat, wird anschließend `print("e")` ausgeführt
 
-  - \\(`\vdots`\\)
+  - \\(\vdots\\)
