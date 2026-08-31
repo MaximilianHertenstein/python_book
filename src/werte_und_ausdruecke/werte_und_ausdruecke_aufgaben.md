@@ -1,4 +1,45 @@
-# Quiz: Werte und Ausdrücke
+# Aufgaben: Werte und Ausdrücke
+
+## 1. Vorhersage → Ausführen
+
+Schreibe zuerst das Ergebnis auf. Führe dann den Code aus und überprüfe deine Vermutung.
+
+``` python, py-execute
+5 - 2 * 3
+```
+
+## 2. Verändere die Eingabe
+
+Ändere nur eine Zahl, damit der Ausdruck den Wert `20` hat.
+
+``` python, py-execute
+2 + 3 * 4
+```
+
+## 3. Ergänze die Lücken
+
+Setze die nötigen Klammern ein, damit der Ausdruck den Wert `20` hat.
+
+``` python, py-execute
+2 + 3 * 4
+```
+
+## 4. Fehler finden und reparieren
+
+Ändere nur ein Zeichen, damit der Ausdruck gültig ist und den Wert `1` hat.
+
+``` python, py-execute
+1 * * 1
+```
+
+## 5. Prüfe deine Idee
+
+Vergleiche die beiden Ausdrücke und erkläre, warum sie unterschiedliche Ergebnisse haben.
+
+``` python, py-execute
+(2 + 3) * 4
+2 + 3 * 4
+```
 
 ## Quiz 1
 

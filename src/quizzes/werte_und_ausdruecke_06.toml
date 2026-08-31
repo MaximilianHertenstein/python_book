@@ -7,5 +7,5 @@ prompt.distractors = [
   "Ein Befehl, den Python sofort ausführt"
 ]
 answer.answer = "Eine Kombination aus Werten, Variablen und Operatoren, die zu einem Ergebnis ausgewertet wird."
-context = "Ein Ausdruck kann zum Beispiel `2 + 3` oder `x * 2` sein."
+context = "Ein Ausdruck ist eine Berechnung wie `2 + 3`. Das Ergebnis dieser Berechnung ist ein Wert, zum Beispiel `5`."
 id = "738a4f7b-2e1d-4e62-a1ec-3a2ee9e8f2b6"

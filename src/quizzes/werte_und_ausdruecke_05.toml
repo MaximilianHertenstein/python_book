@@ -7,5 +7,5 @@ prompt.distractors = [
   "25"
 ]
 answer.answer = "15"
-context = "Klammern haben Vorrang. Erst wird `1 + 2` berechnet und dann mit `5` multipliziert."
+context = "Klammern haben Vorrang. Zuerst wird `1 + 2 = 3` berechnet, danach `3 * 5 = 15`."
 id = "66ee3342-5d24-4e09-84e9-0a84a24df608"

@@ -18,8 +18,8 @@ prompt.distractors = [
   "Nur eine Rechnung mit Rechenzeichen",
   "Ein Befehl, der ausgeführt wird"
 ]
-answer.answer = "Die kleinste Einheit, mit der ein Computerprogramm arbeitet, zum Beispiel `4` oder `'Hallo'`."
-context = "Zahlen, Zeichenketten und andere Daten sind Werte."
+answer.answer = "Eine Zahl oder ein anderes Ergebnis einer Berechnung, zum Beispiel `4` oder `5`."
+context = "Ein Wert ist etwas, das Python berechnen oder verwenden kann. Das Ergebnis von `2 + 3` ist zum Beispiel `5`, und `5` ist ein Wert."
 id = "d5054e00-3399-47a4-bbcb-21f618a90cd6"
 
 [[questions]]
@@ -31,7 +31,7 @@ prompt.distractors = [
   "30"
 ]
 answer.answer = "11"
-context = "Die Multiplikation hat in Python Vorrang vor der Addition."
+context = "Punkt vor Strich: Python rechnet zuerst `2 * 5 = 10` und danach erst `1 + 10 = 11`."
 id = "7361845c-50fc-4ff7-8507-a50a536b9fc3"
 
 [[questions]]

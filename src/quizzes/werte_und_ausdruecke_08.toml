@@ -7,5 +7,5 @@ prompt.distractors = [
   "Weil Klammern fehlen."
 ]
 answer.answer = "Weil die Multiplikation vor der Addition berechnet wird."
-context = "Python verwendet die üblichen Vorrangregeln für Rechenoperationen."
+context = "Python rechnet zuerst Multiplikation und Division und erst danach Addition und Subtraktion. Deshalb ist `2 + 3 * 4 = 14`."
 id = "3d10a5ff-d1a4-44bf-9e8b-7ebc28a8ec6b"

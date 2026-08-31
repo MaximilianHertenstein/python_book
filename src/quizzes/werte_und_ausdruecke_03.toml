@@ -7,5 +7,5 @@ prompt.distractors = [
   "30"
 ]
 answer.answer = "11"
-context = "Die Multiplikation hat in Python Vorrang vor der Addition."
+context = "Punkt vor Strich: Python rechnet zuerst `2 * 5 = 10` und danach erst `1 + 10 = 11`."
 id = "e46ba554-71f9-44ea-aec8-0aa5d74c4e7f"

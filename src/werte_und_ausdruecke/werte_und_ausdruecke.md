@@ -74,4 +74,4 @@ Beispiel eine Zahl, aber sicher kein zweites Rechenzeichen erwarten.
 
 ## Aufgaben
 
-[Zum Quiz zu diesem Kapitel](./werte_und_ausdruecke_aufgaben.md)
+[Zu den Aufgaben zu diesem Kapitel](./werte_und_ausdruecke_aufgaben.md)
