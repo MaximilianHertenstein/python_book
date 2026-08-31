@@ -44,7 +44,7 @@ feet_to_inch(yard_to_feet(7))
 
 Die Auswertung kann folgendermaßen skizziert werden:
 
-![verkettung_funktionen](verkettung_funktionen/verkettung_funktionen.svg)
+![verkettung_funktionen](verkettung_funktionen.svg)
 
 Zunächst wird `yard_to_feet(7)` zu `21` ausgewertet. Dieses Ergebnis ist
 anschließend das *Argument* von `feet_to_inch`.
