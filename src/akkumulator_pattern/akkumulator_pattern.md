@@ -49,8 +49,23 @@ Summe verändert.
 ``` python, py-execute
 total = 0
 x = 1
+print("Zeile 3: x = " + str(x) + " total = " + str(total))
 while x <= 5:
     total = total + x
-    print("x = " + str(x) + " total = " + str(total))
+    print("Zeile 6: x = " + str(x) + " total = " + str(total))
     x = x + 1
+    print("Zeile 8: x = " + str(x) + " total = " + str(total))
+print(total)
 ```
+
+
+
+
+## Akkumulator
+
+Die zusätzliche Variable, die angelegt wird, um das Ergebnis zu berechnen, nennt man **Akkumulator**. 
+Der Aufbau von oben lässt sich auf sehr viele Beispiele übertragen.
+
+- Akkumulator initialisieren
+- Schleife durchlaufen und Akkumulator in der Schleife anpassen#
+- Der Akkumulator enhält jetzt das korrekte Ergebnis
