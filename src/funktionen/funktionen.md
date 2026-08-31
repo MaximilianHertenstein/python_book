@@ -78,6 +78,12 @@ Die Funktion *g* steht für die Umrechnung von Yard in Fuß. Wir wollen
 diese also in Python mit einem besser lesbaren Namen implementieren.
 Dies ist folgendermaßen möglich:
 
+``` python, py-execute
+def yard_to_feet(lengt_in_yard: int):
+    return 3 * lengt_in_yard
+```
+
+
 <img src="skizze_syntax_funktionen/skizze_syntax_funktionen.svg" style="width: 80%; background-color: white; display: block; margin: 0 auto;" alt="functionmachine" />
 
 
