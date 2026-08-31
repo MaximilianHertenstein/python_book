@@ -20,11 +20,20 @@
 
 {{#quiz ../quizzes/werte_und_ausdruecke_05.toml}}
 
+## Quiz 6
+
+{{#quiz ../quizzes/werte_und_ausdruecke_06.toml}}
+
+## Quiz 7
+
+{{#quiz ../quizzes/werte_und_ausdruecke_07.toml}}
+
+## Quiz 8
+
+{{#quiz ../quizzes/werte_und_ausdruecke_08.toml}}
+
+## Quiz 9
+
+{{#quiz ../quizzes/werte_und_ausdruecke_09.toml}}
 
 
-<openpatch-parsons
-  language="python"
-  code="def quadrat(x):
-    ergebnis = x * x
-    print(ergebnis)">
-</openpatch-parsons>

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist ein Ausdruck in Python?"
+prompt.distractors = [
+  "Ein Name für eine Variable",
+  "Nur ein Text in Anführungszeichen",
+  "Ein Befehl, den Python sofort ausführt"
+]
+answer.answer = "Eine Kombination aus Werten, Variablen und Operatoren, die zu einem Ergebnis ausgewertet wird."
+context = "Ein Ausdruck kann zum Beispiel `2 + 3` oder `x * 2` sein."
+id = "738a4f7b-2e1d-4e62-a1ec-3a2ee9e8f2b6"

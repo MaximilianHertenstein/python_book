@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ergibt `8 / 2` in Python?"
+prompt.distractors = [
+  "4",
+  "8",
+  "2"
+]
+answer.answer = "4.0"
+context = "Bei der Division liefert Python normalerweise eine Gleitkommazahl."
+id = "58b9569e-8f8d-4c75-9b27-6679e51f30db"
