@@ -12,15 +12,15 @@ while x <= 5:
     x = x + 1
 ```
 
-Die Variable `x` durchläuft dabei die Zahlen von $1$ bis $5$. In
+Die Variable `x` durchläuft dabei die Zahlen von \\(1\\) bis \\(5\\). In
 jedem Schleifendurchlauf wird nur der aktuelle Wert von `x` verwendet.
 
 ## Berechnung von Summen
 
-Wenn wir die Summe der Zahlen von $1$ bis $5$ berechnen wollen,
+Wenn wir die Summe der Zahlen von \\(1\\) bis \\(5\\) berechnen wollen,
 benötigen wir eine zweite Variable. In dieser Variable soll immer die
-Summe der bisher durchlaufenen Zahlen stehen. Vor der Ausführung der
-Schleife muss die Summe also $0$ sein.
+Summe der bisher durchlaufenen Zahlen gespeichert sein. Vor der Ausführung der
+Schleife muss die Summe also \\(0\\) sein.
 
 ``` python, py-execute
 total = 0

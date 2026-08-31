@@ -26,8 +26,8 @@ x = 'hello'
 x[3]
 ```
 
-Die *Indizes* des *Strings* `'hello'` gehen nur von $`0`$ bis $`4`$.
-Wenn wir einen *Index* größer als $`4`$ verwenden, erhalten wir einen
+Die *Indizes* des *Strings* `'hello'` gehen nur von \\(`0`\\) bis \\(`4`\\).
+Wenn wir einen *Index* größer als \\(`4`\\) verwenden, erhalten wir einen
 `IndexError`.
 
 ``` python, py-execute
@@ -42,7 +42,7 @@ Die Länge eines *Strings* kann mit der Funktion `len` bestimmt werden.
 len('hello')
 ```
 
-Da die *Indizes* eines *Strings* bei $`0`$ anfangen, ist der höchste
+Da die *Indizes* eines *Strings* bei \\(`0`\\) anfangen, ist der höchste
 *Index* um eins kleiner als die Länge.
 
 ## Iteration über Indizes

@@ -33,8 +33,8 @@ for i in range(3):
     print(i)
 ```
 
-Die *Zählervariable* startet also bei $`\mathtt{0}`$ und ist im letzten
-Schritt um $`1`$ kleiner als die Anzahl der Wiederholungen.
+Die *Zählervariable* startet also bei \\(`\mathtt{0}`\\) und ist im letzten
+Schritt um \\(`1`\\) kleiner als die Anzahl der Wiederholungen.
 
 ## Anpassung des Startwerts
 

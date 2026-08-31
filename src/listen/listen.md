@@ -86,7 +86,7 @@ xs
 In den nächsten Abschnitten werden wir *Listen* als Container benutzen,
 so wie wir das schon mit *Strings* getan haben.
 
-Auch die Elemente einer *Liste* haben *Indizes*, die mit $`0`$ beginnen.
+Auch die Elemente einer *Liste* haben *Indizes*, die mit \\(`0`\\) beginnen.
 Die können wir nutzen, um auf diese Elemente zuzugreifen.
 
 ![grafik_listen](grafik_listen/grafik_listen.svg)
@@ -103,8 +103,8 @@ x = ['hello', 'how', 'are', 'you']
 x[3]
 ```
 
-Die *Indizes* der *Liste* `[True, False, True]` gehen nur von $`0`$ bis
-$`2`$. Wenn wir einen *Index* über $`2`$ verwenden, erhalten wir einen
+Die *Indizes* der *Liste* `[True, False, True]` gehen nur von \\(`0`\\) bis
+\\(`2`\\). Wenn wir einen *Index* über \\(`2`\\) verwenden, erhalten wir einen
 `IndexError`.
 
 ``` python, py-execute
@@ -119,7 +119,7 @@ Die Länge einer *Liste* kann mit der Funktion `len` bestimmt werden.
 len([True, False, True])
 ```
 
-Da die *Indizes* einer *Liste* bei $`0`$ anfangen, ist der höchste
+Da die *Indizes* einer *Liste* bei \\(`0`\\) anfangen, ist der höchste
 *Index* um eins kleiner als die Länge.
 
 ## Iteration über Indizes

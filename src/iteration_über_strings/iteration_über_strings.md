@@ -27,7 +27,7 @@ Zeichen in dem String.
 
 - Beim zweiten Durchlauf hat `char` den Wert `"e"`.
 
-- $`\vdots`$
+- \\(`\vdots`\\)
 
 Nach dem Schleifenkopf folgt Schleifenkörper. Dieser wird eingerückt. Er
 besteht aus Statements, in denen die Schleifenvariable genutzt werden
@@ -43,4 +43,4 @@ das Gleiche.
 - Da `char` bei der zweiten Ausführung des Schleifenkörpers den Wert
   `"e"` hat, wird `print("e")` ausgeführt
 
-- $`\vdots`$
+- \\(`\vdots`\\)
