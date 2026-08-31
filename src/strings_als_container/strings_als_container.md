@@ -14,6 +14,8 @@ können wir auf den Buchstaben zugreifen. Hierfür schreiben wir den
 
 ``` python, py-execute
 'hello'[0]
+```
+``` python, py-execute
 'hello'[2]
 ```
 
@@ -22,7 +24,11 @@ der Klammer zuerst ausgewertet werden muss.
 
 ``` python, py-execute
 ('good' + 'bye')[3 + 2]
+```
+``` python, py-execute
 x = 'hello'
+```
+``` python, py-execute
 x[3]
 ```
 
@@ -53,10 +59,11 @@ Dadurch ist die *Zählervariable* bei der letzten Wiederholung um eins
 kleiner als die Länge, was ja gerade dem höchsten *Index* entspricht.
 
 ``` python, py-execute
-for i in range(len('hello')):
+for i in range(0, len('hello')):
     print(i)
-
-for i in range(len('bye')):
+```
+``` python, py-execute
+for i in range(0, len('bye')):
     print(i)
 ```
 
@@ -65,26 +72,15 @@ nacheinander auf die Buchstaben im *String* zuzugreifen.
 
 ``` python, py-execute
 greeting = 'hello'
-for i in range(len(greeting)):
+for i in range(0, len(greeting)):
     print(greeting[i])
 ```
 
-Wir können die *Zählervariable* auch direkt die Buchstaben in dem
-*String* durchlaufen lassen.
+
+Dabei  können wir Start- und Endwert anpassen um nur einen Teil des Strings zu durchlaufen.
 
 ``` python, py-execute
 greeting = 'hello'
-for char in greeting:
-    print(char)
-```
-
-Die Buchstaben eines *Strings* sind selbst wieder *Strings*. D.h. wir
-können mit ihnen die *String-Addition* durchführen.
-
-``` python, py-execute
-greeting = 'hello'
-weird_greeting = ''
-for char in greeting:
-    weird_greeting = char + weird_greeting
-weird_greeting
+for i in range(1, len(greeting) - 1):
+    print(greeting[i])
 ```

@@ -1,5 +1,7 @@
 # Iteration über Strings
 
+# Grundlagen
+
 Strings bestehen aus einzelnen Zeichen. Wir können diese Zeichen mit einer
 `for`-Schleife durchlaufen.
 
@@ -23,3 +25,18 @@ for char in "hello":
     `"e"` hat, wird anschließend `print("e")` ausgeführt
 
   - \\(\vdots\\)
+
+## Akkumulator-Pattern
+
+
+Die Buchstaben eines *Strings* sind selbst wieder *Strings*. D.h. wir
+können mit ihnen die *String-Addition* durchführen.
+
+
+``` python, py-execute
+greeting = 'hello'
+weird_greeting = ''
+for char in greeting:
+    weird_greeting = char + weird_greeting
+weird_greeting
+```
