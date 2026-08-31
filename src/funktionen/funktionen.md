@@ -11,7 +11,7 @@ Yard gilt:*
 
 - *Ein Yard sind $3$ Fuß.*
 
-- *a)* Wie viel sind $7$ Yard in Fuß
+- *a)* Wie viel sind \\(7\\) Yard in Fuß
 - *b)* wie viel sind $19$ Yard in
 Fuß?*
 

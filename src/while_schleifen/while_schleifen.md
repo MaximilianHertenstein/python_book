@@ -101,5 +101,6 @@ def count_to_four_and_say_goodbye():
         print(x)
         x = x + 1
     print('Goodbye')
-count_to_four_and_say_goodbye
+    
+count_to_four_and_say_goodbye()
 </script>

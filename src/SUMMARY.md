@@ -19,6 +19,8 @@
 - [if-else](./bedingte_ausführung/bedingte_ausführung_2.md)
 - [Variablen neue Werte zuweisen](./werte_von_variablen_ändern/werte_von_variablen_ändern.md)
 - [While-Schleifen](./while_schleifen/while_schleifen.md)
+- [snoop](./snoop/snoop.md)
+
 - [Akkumulator-Pattern](./akkumulator_pattern/akkumulator_pattern.md)
 - [For-Schleifen](./for_schleifen/for_schleifen.md)
 - [Iteration über Strings](./iteration_über_strings/iteration_über_strings.md)
