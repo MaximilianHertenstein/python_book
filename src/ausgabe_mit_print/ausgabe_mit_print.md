@@ -105,10 +105,10 @@ wie im letzten Beispiel.
 
 
 Im Gegensatz zu allen Funktionen, die wir bisher gesehen haben, hat
-Diese keinen interessanten Rückgabewert. Der Rückgabewert ist immer das
-Element `None`. Dies ist das einzige Element mit dem Typ `NoneType`.
-Darin ist keinerlei Information gespeichert. Die Funktion ist trotzdem
-sehr nützlich, weil sie ihr Argument in der Konsole ausgibt.
+diese Funktion keinen interessanten Rückgabewert. Der Rückgabewert ist
+immer das Element `None`. Dies ist das einzige Element mit dem Typ
+`NoneType`. Darin ist keinerlei Information gespeichert. Die Funktion ist
+trotzdem sehr nützlich, weil sie ihr Argument in der Konsole ausgibt.
 
 
 

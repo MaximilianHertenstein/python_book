@@ -63,9 +63,10 @@ print(total)
 
 ## Akkumulator
 
-Die zusätzliche Variable, die angelegt wird, um das Ergebnis zu berechnen, nennt man **Akkumulator**. 
-Der Aufbau von oben lässt sich auf sehr viele Beispiele übertragen.
+Die zusätzliche Variable, die angelegt wird, um das Ergebnis zu
+berechnen, nennt man **Akkumulator**. Der Aufbau von oben lässt sich auf
+sehr viele Beispiele übertragen.
 
 - Akkumulator initialisieren
-- Schleife durchlaufen und Akkumulator in der Schleife anpassen#
-- Der Akkumulator enhält jetzt das korrekte Ergebnis
+- Schleife durchlaufen und Akkumulator in der Schleife anpassen
+- Der Akkumulator enthält jetzt das korrekte Ergebnis

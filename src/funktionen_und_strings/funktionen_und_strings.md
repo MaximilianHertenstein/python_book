@@ -4,7 +4,7 @@
 
 ## Motivation
 
-Wir wollen eine Funktion `greet_bavarian` schreiben, der der Name einer
+Wir wollen eine Funktion `greet_bavarian` schreiben, der ein Name einer
 Benutzerin als *String* übergeben wird und die diese Benutzerin mit
 `'Servus'` begrüßt.
 
@@ -55,7 +55,7 @@ kann also genau so in dem *Ausdruck* hinter `return` verwendet werden.
 Bei beiden Rechnungen taucht anschließend der *Operator* `+` auf. Auch
 dieser muss also in dem *Ausdruck* hinter `return` verwendet werden.
 
-Ab jetzt unterscheiden sich die beiden Rechnung. Um das Ergebnis von
+Ab jetzt unterscheiden sich die beiden Rechnungen. Um das Ergebnis von
 `greet_bavarian('Ada')` zu berechnen, müssen wir mit `'Ada'` addieren.
 Bei der Berechnung des *Rückgabewerts* von `greet_bavarian('Grace')`
 müssen wir stattdessen mit `'Grace'` addieren. Es handelt sich **nicht**

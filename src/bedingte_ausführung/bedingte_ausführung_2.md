@@ -4,12 +4,13 @@
 
 ## Grundlegendes / Motivation
 
-Im letzten Kapitel haben wir Funktionen geschrieben, die in verschiedenen Fällen, unterschiedliche Werte zurückgegeben haben.
+Im letzten Kapitel haben wir Funktionen geschrieben, die in verschiedenen
+Fällen unterschiedliche Werte zurückgegeben haben.
 
 ``` python, py-execute
 def test_result(points: int) -> str:
     if points > 50:
-        return P'assed'
+        return 'Passed'
     return 'Failed'
 ```
 
@@ -20,8 +21,8 @@ test_result(30)
 test_result(53)
 ```
 
-Wir wollen die Funktion nochmal mit `print` statt `return` schreiben.
-
+Wir wollen die Funktion noch einmal mit `print` statt `return`
+schreiben.
 
 ``` python, py-execute
 def test_result_print(points: int) -> str:
@@ -38,18 +39,22 @@ test_result_print(53)
 ```
 
 Im zweiten Beispiel ist die Bedingung `points > 50` erfüllt. Deshalb wird
-`print('Passed')` ausgeführt. im Gegensatz zu `return` wird bei `print` die Funktion **nicht** automatisch verlassen. Deshalb wird danach auch noch `print('Failed')` ausgeführt.
+`print('Passed')` ausgeführt. Im Gegensatz zu `return` verlässt `print`
+die Funktion **nicht** automatisch. Deshalb wird danach auch noch
+`print('Failed')` ausgeführt.
 
-Eigentlich soll `print('Failed')` nur ausgeführt werden, wenn `points > 50` zu `False` ausgewertet wird.
+Eigentlich soll `print('Failed')` nur ausgeführt werden, wenn `points > 50`
+zu `False` ausgewertet wird.
 
 Dies kann mit *if-else-Statements* erreicht werden.
 
 ## if-else-Statements
 
-
-Bei diesen *Statements* schreibt nach den Statements die unter dem `if` eingerückt sind, auf der Höhe von `if` das Schlüsselwort `else` und einen Doppelpunkt. Danach
-folgen eingerückte *Statements*. Diese werden nur dann ausgeführt, wenn
-der Ausdruck hinter `if` zu `False` ausgewertet wird.
+Bei diesen *Statements* schreibt man nach den Statements, die unter dem
+`if` eingerückt sind, auf der Höhe von `if` das Schlüsselwort `else` und
+einen Doppelpunkt. Danach folgen eingerückte *Statements*. Diese werden
+nur dann ausgeführt, wenn der Ausdruck hinter `if` zu `False`
+ausgewertet wird.
 
 ``` python, py-execute
 def test_result_print(points: int) -> str:

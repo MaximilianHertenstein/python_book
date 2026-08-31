@@ -13,8 +13,9 @@ Dies muss nicht so sein. Wir können in Funktionen beliebige andere
 *Statements* verwenden. Dafür schreiben wir diese ebenfalls eingerückt
 unter den *Funktionskopf*. Alle *Statements*, die zu einer Funktion
 gehören, nennt man *Funktionskörper*. Diese *Statements* werden beim
-Funktionsaufruf der Reihe nach ausgeführt. Z. B. wurden in der folgenden
-Variante der Funktion `yard_to_inch` *Zuweisungsstatements* verwendet.
+Funktionsaufruf der Reihe nach ausgeführt. Zum Beispiel wurden in der
+folgenden Variante der Funktion `yard_to_inch` *Zuweisungsstatements*
+verwendet.
 
 ``` python, py-execute
 def yard_to_inch(length_in_yard: int) -> int:

@@ -1,11 +1,8 @@
 # Funktionen mit mehreren Parametern
 
-
-# Funktionen mit mehreren Parametern
-
 Funktionen können auch mehrere oder gar keine *Parameter* haben. Die
 *Parameter* stehen in den runden Klammern hinter dem Funktionsnamen.
-Zwischen zwei *Parameter* schreibt man ein Komma.
+Zwischen zwei *Parametern* schreibt man ein Komma.
 
 ``` python, py-execute
 def constant_zero() -> int:

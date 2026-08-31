@@ -77,7 +77,8 @@ for i in range(0, len(greeting)):
 ```
 
 
-Dabei  können wir Start- und Endwert anpassen um nur einen Teil des Strings zu durchlaufen.
+Dabei können wir Start- und Endwert anpassen, um nur einen Teil des
+Strings zu durchlaufen.
 
 ``` python, py-execute
 greeting = 'hello'

@@ -1,6 +1,6 @@
 # Iteration über Strings
 
-# Grundlagen
+## Grundlagen
 
 Strings bestehen aus einzelnen Zeichen. Wir können diese Zeichen mit einer
 `for`-Schleife durchlaufen.

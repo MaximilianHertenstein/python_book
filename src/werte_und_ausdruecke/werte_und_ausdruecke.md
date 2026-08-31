@@ -41,7 +41,6 @@ weitere *Operatoren* kennenlernen.
 stehen die *Operanden*, die in der Rechnung verwendet werden. Im ersten
 Beispiel oben steht der *Operator* `+` zwischen dem linken *Operanden*
 `4` und dem rechten *Operanden* `3`.
-`4` und dem rechten *Operanden* `3`.
 - Zahlen wie `4` und `3` sind *Werte* (*Values*). *Werte* sind die
 kleinsten Einheiten, mit denen ein Computerprogramm arbeitet. Das
 Ergebnis einer Rechnung ist immer ein *Wert*. Später werden wir neben Zahlen noch
@@ -63,7 +62,7 @@ diesen nicht auswerten und gibt eine Fehlermeldung aus.
 Bei diesem Fehler handelt es sich um einen `SyntaxError`. Die *Syntax*
 einer Programmiersprache gibt an, welche Zeichen im Code erlaubt sind
 und wie diese miteinander kombiniert werden dürfen. Ein `SyntaxError`
-tritt auf, wenn eine dieser Regeln verletzt wurde. Python zeigt mit einen `^` genau
+tritt auf, wenn eine dieser Regeln verletzt wurde. Python zeigt mit einem `^` genau
 an, welches Zeichen zuerst nicht interpretiert werden konnte. In diesem
 Fall ist es das `*` nach dem `+`. An dieser Stelle würde Python zum
 Beispiel eine Zahl, aber sicher kein zweites Rechenzeichen erwarten.
