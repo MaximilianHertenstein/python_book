@@ -1,11 +1,4 @@
-``` python, py-execute
-def count_to_4_and_say_goodbye() -> None:
-    x = 1
-    while x < 5:
-        print(x)
-        x = x + 1
-    print("goodbye")
-```
+
 
 # While-Schleifen
 
@@ -15,20 +8,20 @@ Mit `if`-Statements kann entschieden werden, ob bestimmte Codezeilen
 ausgeführt werden sollen. Wenn die Bedingung hinter `if` zu `True`
 ausgewertet wird, wird der eingerückte Code ausgeführt.
 
-``` python, py-execute
+<script type="py-editor">
 x = 1
 if x < 5:
-    print(str(x) + " ist kleiner als 5")
-```
+    print(str(x) + ' ist kleiner als 5')
+</script>
 
 Wenn die Bedingung hinter `if` zu `False` ausgewertet wird, wird der
 eingerückte Code nicht ausgeführt.
 
-``` python, py-execute
+<script type="py-editor">
 x = 8
 if x < 5:
-    print(str(x) + " ist kleiner als 5")
-```
+    print(str(x) + ' ist kleiner als 5')
+</script>
 
 ## While-Schleifen
 
@@ -36,22 +29,21 @@ if x < 5:
 Schlüsselwort `while` steht eine Bedingung. In den nächsten Zeilen
 folgen eingerückte Statements.
 
-``` python, py-execute
-x = 8
+<script type="py-editor">
 while x < 5:
-    print(str(x) + " ist kleiner als 5")
-```
+    print(str(x) + ' ist kleiner als 5')
+</script>
 
 Zunächst läuft die Ausführung der `while`-Schleife genau wie bei einem
 `if`-Statement. Die Bedingung hinter `while` wird ausgewertet. Wenn die
 Bedingung zu `False` ausgewertet wird, wird der eingerückte Code nicht
 ausgeführt.
 
-``` python, py-execute
+<script type="py-editor">
 x = 8
 while x < 5:
-    print(str(x) + " ist kleiner als 5")
-```
+    print(str(x) + ' ist kleiner als 5')
+</script>
 
 Wenn die Bedingung zu `True` ausgewertet wird, wird der eingerückte Code
 ausgeführt. Danach folgt ein Sprung zurück zu der Zeile, in der `while`
@@ -61,32 +53,25 @@ erneut ausgeführt und danach wieder zurückgesprungen.
 
 Das heißt: Die Ausführung des folgenden Codes bricht nie ab.
 
-``` python, py-execute
+<script type="py-editor">
 x = 1
 while x < 5:
-    print(str(x) + " ist kleiner als 5")
-```
+    print(str(x) + ' ist kleiner als 5')
+</script>
 
-Dabei ist die folgende Ausgabe zu sehen.
 
-``` shell
-1 ist kleiner als 5
-1 ist kleiner als 5
-1 ist kleiner als 5
-1 ist kleiner als 5
-...
-```
+
 
 Wenn wir eine eingerückte Zeile ergänzen, in der `x` vergrößert wird,
 ist die Bedingung nach einigen Durchläufen nicht mehr erfüllt und die
 Ausführung bricht ab.
 
-``` python, py-execute
+<script type="py-editor">
 x = 1
 while x < 5:
-    print(str(x) + " ist kleiner als 5")
+    print(str(x) + ' ist kleiner als 5')
     x = x + 1
-```
+</script>
 
 Die Zeile mit dem `while` und der Bedingung nennt man Kopfzeile der
 Schleife. Die eingerückten Statements darunter nennt man
@@ -95,15 +80,26 @@ Schleifenkörper.
 Wenn eine Zeile unter dem Schleifenkörper nicht eingerückt ist, gehört
 sie **nicht** zum Schleifenkörper und wird **nicht** wiederholt.
 
-``` python, py-execute
-def count_to_4_and_say_goodbye() -> None:
+<script type="py-editor">
+x = 1
+while x < 5:
+    print(x)
+    x = x + 1
+print('Goodbye')
+</script>
+
+
+## While-Schleifen in Funktionen
+
+Wie alle Statements können auch `while`-Schleifen in Funktionen verwendet werden.
+
+<script type="py-editor">
+
+def count_to_four_and_say_goodbye():
     x = 1
     while x < 5:
         print(x)
         x = x + 1
-    print("goodbye")
-```
-
-``` python, py-execute
-count_to_4_and_say_goodbye()
-```
+    print('Goodbye')
+count_to_four_and_say_goodbye
+</script>

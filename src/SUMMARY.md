@@ -16,6 +16,7 @@
 - [Eingabe](./eingabe/eingabe.md)
 - [Booleans](./booleans/booleans.md)
 - [Bedingte Ausführung](./bedingte_ausführung/bedingte_ausführung.md)
+- [if-else](./bedingte_ausführung/bedingte_ausführung_2.md)
 - [Variablen neue Werte zuweisen](./werte_von_variablen_ändern/werte_von_variablen_ändern.md)
 - [While-Schleifen](./while_schleifen/while_schleifen.md)
 - [Akkumulator-Pattern](./akkumulator_pattern/akkumulator_pattern.md)
