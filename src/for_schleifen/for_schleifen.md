@@ -24,7 +24,7 @@ while i <= 7:
 
 
 Es fällt auf, dass sich im Code außer dem konkreten Anfangswert und den Endwert alles wiederholt.
-Um diese Widerholung zu vermieden, gibt kann man immer wenn man in Einser-Schritten zählt eine  `for`-Schleifen nutzen.
+Um diese Widerholung zu vermeiden, kann man immer wenn man in Einser-Schritten zählt, eine  `for`-Schleifen nutzen.
 
 
 ## Grundlagen
