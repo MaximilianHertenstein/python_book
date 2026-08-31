@@ -27,6 +27,16 @@
     return (idx === -1 ? message : message.slice(idx)).trim();
   }
 
+  function formatResult(pyodide, value) {
+  if (typeof value !== 'string') return value;
+  const repr = pyodide.pyimport('builtins.repr');
+  try {
+    return repr(value);
+  } finally {
+    repr.destroy();
+  }
+}
+
   async function runCode(block, runBtn, output) {
     if (runBtn.dataset.running === 'true') return;
 
@@ -42,11 +52,14 @@
       const capture = { batched: (text) => lines.push(text) };
       pyodide.setStdout(capture);
       pyodide.setStderr(capture);
+      pyodide.setStdin({
+  stdin: () => prompt('Eingabe für input:'),
+});
 
       output.textContent = 'Berechne …';
       // Pyodide gibt den Wert des letzten Ausdrucks automatisch zurueck (REPL-Verhalten von eval_code).
       const result = await pyodide.runPythonAsync(block.textContent || '');
-      if (result != null) lines.push(result);
+      if (result != null) lines.push(formatResult(pyodide, result));
 
       output.textContent = lines.join('\n');
     } catch (error) {

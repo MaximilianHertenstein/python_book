@@ -1,7 +1,3 @@
-``` python, py-execute
-def full_age(age: int) -> bool:
-    return age > 17
-```
 
 # Booleans
 
@@ -20,14 +16,21 @@ vergleichen.
 
 ``` python, py-execute
 2 < 3
+```
+``` python, py-execute
 2 * 3 == 3 * 2
+```
+``` python, py-execute
 'hello' == 'hello!'
+```
+``` python, py-execute
 2 != 2
 ```
 
-Die wichtigsten *Vergleichsoperatoren* sind in Tabelle
-<a href="#table:vgl_op" data-reference-type="ref"
-data-reference="table:vgl_op">[table:vgl_op]</a> aufgeführt.
+Die wichtigsten *Vergleichsoperatoren* sind in der folgenden Tabelle
+aufgeführt.
+
+![tabelle_vergleichsoperatoren](tabelle_vergleichsoperatoren/tabelle_vergleichsoperatoren.svg)
 
 <span id="table:vgl_op" data-label="table:vgl_op"></span>
 
@@ -45,12 +48,14 @@ Wie alle *Werte* können wir *Booleans* in *Variablen* speichern.
 
 ``` python, py-execute
 seven_is_five_plus_three = 7 == 5 + 3
+```
+``` python, py-execute
 seven_is_five_plus_three
 ```
 
 ## Funktionen
 
-Natürlich können *Booleans* auch *Argumente* oder *Rückgabewerte* von
+Wie alle Werte können *Booleans* auch *Argumente* oder *Rückgabewerte* von
 Funktionen sein.
 
 ``` python, py-execute
@@ -60,6 +65,8 @@ def full_age(age: int) -> bool:
 
 ``` python, py-execute
 full_age(17)
+```
+``` python, py-execute
 full_age(18)
 ```
 
@@ -71,13 +78,15 @@ mit *Operatoren* verknüpft werden.
 
 ## Verneinungen
 
-Bedingungen können mithilfe des Schlüsselworts `not` verneint werden.
-Die Verneinung einer Bedingung ist genau dann erfüllt, wenn die
-Bedingung selbst nicht erfüllt ist.
+Der Operator `not` macht `True` zu `False` und `False` zu `True`.
 
 ``` python, py-execute
 not True
+```
+``` python, py-execute
 not False
+```
+``` python, py-execute
 not 1 == 2
 ```
 
@@ -91,7 +100,11 @@ Ausdruck* genau dann zu `True` ausgewertet, wenn beide Teilausdrücke zu
 
 ``` python, py-execute
 True and 15 > 10
+```
+``` python, py-execute
 1 < 2 and 2 > 0
+```
+``` python, py-execute
 3 <= 3 and (2 < 0 and 4 >= 5)
 ```
 
@@ -101,9 +114,42 @@ der beiden *Teilausdrücke* zu `True` ausgewertet wird.
 
 ``` python, py-execute
 5 != 5 or (not 4 < 3)
+```
+``` python, py-execute
 4 <= 3 or (1 < 2 and 2 > 0)
 ```
 
-Wenn in einem *booleschen Ausdruck* mehrere *Operatoren* vorkommen, ist
-es oft sinnvoll, Klammern zu setzten. Dadurch ist klar, welche
-*Teilausdrücke* zuerst ausgewertet werden.
+## Vorrangregeln
+
+Bei Rechenausdrücken gilt die Punkt-vor-Strich-Regel.
+
+``` python, py-execute
+1 + 2 * 3
+```
+
+Der Ausdruck wird also folgendermaßen ausgewertet.
+
+```python
+1 + 2 * 3 = 1 + 6 = 7
+```
+
+Für *boolesche Ausdrücke* gibt es die `and`-vor-`or`-Regel.
+
+
+``` python, py-execute
+True or False and False
+```
+
+Der Ausdruck wird also folgendermaßen ausgewertet.
+
+```python
+True or False and False = True or False = True
+```
+
+Eine andere Auswertungsreihenfolge kann durch das Setzen von Klammern erreicht werden.
+
+``` python, py-execute
+(True or False) and False
+```
+
+

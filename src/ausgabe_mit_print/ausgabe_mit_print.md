@@ -40,7 +40,7 @@ greet_bavarian('Ada')
 ![funktionsaufruf_strings_grafik_grace](funktionsaufruf_strings_grafik_grace/funktionsaufruf_strings_grafik_grace.svg)
 
 
-Normalerweise steht Programmcode aber nicht in Zellen, sondern in einer
+Normalerweise steht Programmcode aber nicht in mehreren Zellen, sondern in einer
 Textdatei. Solche Textdateien mit Programmcode nennt man *Skript*.
 Skripte erkennst du in diesem Buch am weißen Hintergrund.
 
@@ -75,6 +75,9 @@ Funktion `print` nutzen.
 print('Hello')
 </script>
 
+Hierbei fällt auch auf, dass die Anführungszeichen nicht angezeigt werden. 
+Das entspricht dem Verhalten von Programmen, die du verwendest.
+
 Wir können `print` auch verwenden, um den Rückgabewert von
 `greet_bavarian('Ada')` anzuzeigen.
 
@@ -89,7 +92,7 @@ Die gleiche Ausgabe kann auch erreicht werden, wenn wir in der
 Definition von `greet_bavarian` statt `return` `print` verwenden.
 
 <script type="py-editor">
-def greet_bavarian_print(name: str) -> str:
+def greet_bavarian_print(name: str) -> None:
     print('Servus ' + name)
 
 greet_bavarian_print('Ada')
@@ -137,7 +140,7 @@ trotzdem sehr unterschiedlich.
 
 
 ``` python, py-execute
-def greet_bavarian_print(name: str) -> str:
+def greet_bavarian_print(name: str) -> None:
     return 'Servus ' + name
 ```
 
