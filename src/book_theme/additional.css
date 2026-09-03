@@ -1,10 +1,22 @@
-/* Inhaltsbilder zentrieren (UI-Icons ausnehmen, daher nur main) */
+/* Zusatz-Theme: Bilder, Code-Runner (runner.js) und PyScript-Editoren (theme-aware via mdBook-Variablen). */
+
+:root {
+    --py-accent: #2e8b40;
+    --py-info: #008cba;
+    --py-error: #c0392b;
+    --py-radius: 8px;
+    --py-editor-bg: #f6f8fa;
+    --py-editor-fg: #1f2328;
+}
+
 main img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 1rem auto;
-    background: #fff;
+    border-radius: var(--py-radius);
+    background: #fff; /* Matte für Screenshots mit Transparenz */
+    color-scheme: light;
 }
 
 main figure {
@@ -12,98 +24,129 @@ main figure {
     text-align: center;
 }
 
-/* Play-Button nutzt mdBooks .buttons-Leiste, hier nur Farbe */
 pre > .buttons button.py-play-btn {
-    color: #2e8b40;
-}
-pre > .buttons button.py-play-btn:hover {
-    color: var(--sidebar-active);
-}
-pre > .buttons button.py-play-btn:disabled {
-    opacity: .6;
-    cursor: wait;
+    color: var(--py-accent);
+    transition: color .15s;
+
+    &:hover {
+        color: var(--sidebar-active);
+    }
+
+    &:disabled {
+        opacity: .6;
+        cursor: wait;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 }
 
-/* Ausgabebox unter ausführbarem Code (runner.js steuert per hidden) */
-.py-output {
-    background: rgba(0, 0, 0, .04);
-    border-left: 3px solid #008cba;
-    padding: 8px 12px;
-    margin-top: 6px;
-    border-radius: 0 4px 4px 0;
-    font-family: monospace;
-    white-space: pre-wrap;
-}
-.py-output[hidden] {
-    display: none;
-}
-.py-output-error {
-    border-left-color: #c0392b;
-    color: #c0392b;
-}
-
-/* PyScript-Editoren lesbar vom Fließtext absetzen */
-:is(py-editor, mpy-editor) {
-    display: block;
-    margin: 1rem 0 1.5rem;
-}
-:is(py-editor, mpy-editor) :is(.py-editor-box, .mpy-editor-box) {
-    border: 1px solid var(--table-border-color);
-    border-radius: 10px;
-    padding: .75rem;
-    background: var(--bg);
-}
-:is(py-editor, mpy-editor) :is(.py-editor-box, .mpy-editor-box)::before {
-    content: "" !important;
-    display: none !important;
-}
-:is(py-editor, mpy-editor) :is(.py-editor-input, .mpy-editor-input,
-    .py-editor-output, .mpy-editor-output) {
-    background: #f6f8fa;
-    color: #1f2328;
-}
-:is(py-editor, mpy-editor) :is(.py-editor-input, .mpy-editor-input) {
-    border: 1px solid var(--table-border-color);
-    border-radius: 8px;
-    padding: .5rem;
-}
-
-code.language-python.py-execute {
+/* Fokus nur bei Tastatur-Bedienung zeigen */
+code.language-python.py-execute:focus:not(:focus-visible) {
     outline: none;
 }
 
-:is(py-editor, mpy-editor) :is(.py-editor-output, .mpy-editor-output) {
-    display: none;
-    margin-top: .75rem;
-    border: 1px solid var(--table-border-color);
-    border-radius: 8px;
-    padding: .5rem;
-}
-:is(py-editor, mpy-editor) :is(.py-editor-output, .mpy-editor-output):not(:empty) {
-    display: block;
-}
-:is(py-editor, mpy-editor) :is(.py-editor-run-button, .mpy-editor-run-button) {
-    border: 1px solid var(--table-border-color);
-    border-radius: 999px;
-    background: var(--bg);
-}
-:is(py-editor, mpy-editor) .cm-editor {
-    font-size: .98rem;
-    line-height: 1.5;
-    background: #f6f8fa !important;
-    color: #1f2328 !important;
-}
-:is(py-editor, mpy-editor) .cm-content,
-:is(py-editor, mpy-editor) .cm-content * {
-    color: #1f2328 !important;
-}
-:is(py-editor, mpy-editor) :is(.cm-gutters, .cm-lineNumbers) {
-    display: none !important;
-    background: transparent !important;
-    border: 0 !important;
+.py-play-btn:focus-visible,
+.py-editor-run-button:focus-visible,
+.mpy-editor-run-button:focus-visible {
+    outline: 2px solid var(--sidebar-active);
+    outline-offset: 2px;
 }
 
-/* Quiz-Seite in Sidebar verstecken (nur technischer Summary-Eintrag) */
-#sidebar li:has(a[href$="werte_und_ausdruecke_aufgaben.html"]) {
-    display: none !important;
+.py-output {
+    margin-top: .5rem;
+    padding: .5rem .75rem;
+    border-left: 3px solid var(--py-info);
+    border-radius: 0 var(--py-radius) var(--py-radius) 0;
+    background: var(--quote-bg);
+    color: var(--fg);
+    font-family: var(--mono-font);
+    font-size: var(--code-font-size);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow: auto;
+    max-height: 24rem;
+
+    &[hidden] {
+        display: none !important;
+    }
+
+    &.py-output-error {
+        border-left-color: var(--py-error);
+        color: var(--py-error);
+    }
+}
+
+:is(py-editor, mpy-editor) {
+    display: block;
+    margin: 1rem 0 1.5rem;
+    color-scheme: light; /* Innenleben bewusst hell */
+
+    :is(.py-editor-box, .mpy-editor-box) {
+        border: 1px solid var(--table-border-color);
+        border-radius: 10px;
+        padding: .75rem;
+        background: var(--bg);
+
+        /* "Python Editor"-Badge aus PyScript-Core ausblenden */
+        &::before {
+            content: "" !important;
+            display: none !important;
+        }
+    }
+
+    :is(.py-editor-input, .mpy-editor-input, .py-editor-output, .mpy-editor-output) {
+        border: 1px solid var(--table-border-color);
+        border-radius: var(--py-radius);
+        padding: .5rem;
+        background: var(--py-editor-bg);
+        color: var(--py-editor-fg);
+    }
+
+    /* Ausgabe erst bei Inhalt zeigen */
+    :is(.py-editor-output, .mpy-editor-output) {
+        display: none;
+        margin-top: .75rem;
+
+        &:not(:empty) {
+            display: block;
+        }
+    }
+
+    :is(.py-editor-run-button, .mpy-editor-run-button) {
+        border: 1px solid var(--table-border-color);
+        border-radius: 999px;
+        background: var(--bg);
+    }
+
+    /* Syntax-Highlighting erhalten: keine color-Overrides auf Tokens */
+    .cm-editor {
+        background: var(--py-editor-bg);
+        color: var(--py-editor-fg);
+        font-size: .98rem;
+        line-height: 1.5;
+        border-radius: var(--py-radius);
+    }
+
+    .cm-content {
+        color: var(--py-editor-fg);
+        caret-color: var(--py-editor-fg);
+    }
+
+    :is(.cm-gutters, .cm-lineNumbers) {
+        display: none;
+    }
+}
+
+@media print {
+    .py-play-btn,
+    .py-editor-run-button,
+    .mpy-editor-run-button {
+        display: none;
+    }
+
+    .py-output {
+        max-height: none;
+    }
 }
