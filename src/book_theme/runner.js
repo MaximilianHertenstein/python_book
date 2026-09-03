@@ -5,11 +5,34 @@
 (() => {
   const el = (tag, props) => Object.assign(document.createElement(tag), props);
 
+  // Pyodide wird erst beim ersten Klick nachgeladen (kein <script> in head.hbs),
+  // damit Seiten ohne py-execute gar nichts laden.
+  const PYODIDE_JS_URL = 'https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js';
+  const PYODIDE_INDEX_URL = 'https://cdn.jsdelivr.net/pyodide/v0.26.0/full/';
   let pyodideReadyPromise = null;
-  const getPyodide = () => pyodideReadyPromise ??= loadPyodide().catch((error) => {
-    pyodideReadyPromise = null;
-    throw error;
-  });
+  let pyodideScriptPromise = null;
+
+  const ensurePyodideScript = () => {
+    if (window.loadPyodide) return Promise.resolve();
+    return (pyodideScriptPromise ??= new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = PYODIDE_JS_URL;
+      s.onload = () => resolve();
+      s.onerror = () => {
+        pyodideScriptPromise = null;
+        reject(new Error('Pyodide konnte nicht geladen werden.'));
+      };
+      document.head.append(s);
+    }));
+  };
+
+  const getPyodide = async () => {
+    await ensurePyodideScript();
+    return (pyodideReadyPromise ??= window.loadPyodide({ indexURL: PYODIDE_INDEX_URL }).catch((error) => {
+      pyodideReadyPromise = null;
+      throw error;
+    }));
+  };
 
   function rehighlight(block) {
     const hljs = window.hljs;
