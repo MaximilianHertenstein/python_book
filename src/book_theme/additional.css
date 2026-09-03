@@ -1,149 +1,109 @@
-/* Bilder und SVG-Grafiken im Inhalt zentrieren und mit weißem Hintergrund
-   darstellen, ohne die UI-Icons der Website zu beeinflussen. */
-img,
-figure img {
+/* Inhaltsbilder zentrieren (UI-Icons ausnehmen, daher nur main) */
+main img {
     display: block;
     max-width: 100%;
-    min-width: 70%;
     height: auto;
     margin: 1rem auto;
-    background-color: #ffffff;
+    background: #fff;
 }
 
-figure {
+main figure {
     margin: 1rem auto;
     text-align: center;
 }
 
-/* Play-Button in der Codezelle fuer ```python,py-execute (runner.js).
-   Der Button steckt in mdBooks eigener .buttons-Leiste (derselben wie der
-   eingebaute Kopier-Button) und erbt von dort automatisch Position, Rahmen,
-   Groesse, Hover- und Sichtbarkeits-Verhalten aus mdBooks chrome.css.
-   Hier muessen nur noch Icon-Inhalt und Akzentfarbe ergaenzt werden. */
+/* Play-Button nutzt mdBooks .buttons-Leiste, hier nur Farbe */
 pre > .buttons button.py-play-btn {
     color: #2e8b40;
 }
-
 pre > .buttons button.py-play-btn:hover {
     color: var(--sidebar-active);
 }
-
 pre > .buttons button.py-play-btn:disabled {
-    opacity: 0.6;
+    opacity: .6;
     cursor: wait;
 }
 
+/* Ausgabebox unter ausführbarem Code (runner.js steuert per hidden) */
 .py-output {
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, .04);
     border-left: 3px solid #008cba;
     padding: 8px 12px;
     margin-top: 6px;
     border-radius: 0 4px 4px 0;
     font-family: monospace;
     white-space: pre-wrap;
+}
+.py-output[hidden] {
     display: none;
 }
-
-.py-output.py-output-error {
+.py-output-error {
     border-left-color: #c0392b;
     color: #c0392b;
 }
 
-/* Keep PyScript editors readable and visually separated from the text flow. */
-py-editor,
-mpy-editor {
+/* PyScript-Editoren lesbar vom Fließtext absetzen */
+:is(py-editor, mpy-editor) {
     display: block;
     margin: 1rem 0 1.5rem;
 }
-
-py-editor .py-editor-box,
-mpy-editor .mpy-editor-box {
+:is(py-editor, mpy-editor) :is(.py-editor-box, .mpy-editor-box) {
     border: 1px solid var(--table-border-color);
     border-radius: 10px;
-    padding: 0.75rem;
+    padding: .75rem;
     background: var(--bg);
 }
-
-py-editor .py-editor-box::before,
-mpy-editor .mpy-editor-box::before {
+:is(py-editor, mpy-editor) :is(.py-editor-box, .mpy-editor-box)::before {
     content: "" !important;
     display: none !important;
 }
-
-py-editor .py-editor-input,
-mpy-editor .mpy-editor-input {
-    border: 1px solid var(--table-border-color);
-    border-radius: 8px;
-    padding: 0.5rem;
+:is(py-editor, mpy-editor) :is(.py-editor-input, .mpy-editor-input,
+    .py-editor-output, .mpy-editor-output) {
     background: #f6f8fa;
     color: #1f2328;
+}
+:is(py-editor, mpy-editor) :is(.py-editor-input, .mpy-editor-input) {
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px;
+    padding: .5rem;
 }
 
 code.language-python.py-execute {
     outline: none;
 }
 
-py-editor .py-editor-output,
-mpy-editor .mpy-editor-output {
+:is(py-editor, mpy-editor) :is(.py-editor-output, .mpy-editor-output) {
     display: none;
-    margin-top: 0.75rem;
+    margin-top: .75rem;
     border: 1px solid var(--table-border-color);
     border-radius: 8px;
-    padding: 0.5rem;
-    background: #f6f8fa;
-    color: #1f2328;
+    padding: .5rem;
 }
-
-py-editor .py-editor-output:empty,
-mpy-editor .py-editor-output:empty {
-    display: none !important;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-}
-
-py-editor .py-editor-output:not(:empty),
-mpy-editor .py-editor-output:not(:empty) {
+:is(py-editor, mpy-editor) :is(.py-editor-output, .mpy-editor-output):not(:empty) {
     display: block;
 }
-
-py-editor .py-editor-run-button,
-mpy-editor .mpy-editor-run-button {
+:is(py-editor, mpy-editor) :is(.py-editor-run-button, .mpy-editor-run-button) {
     border: 1px solid var(--table-border-color);
     border-radius: 999px;
     background: var(--bg);
 }
-
-py-editor .cm-editor,
-mpy-editor .cm-editor {
-    font-size: 0.98rem;
+:is(py-editor, mpy-editor) .cm-editor {
+    font-size: .98rem;
     line-height: 1.5;
     background: #f6f8fa !important;
     color: #1f2328 !important;
 }
-
-py-editor .cm-content,
-mpy-editor .cm-content,
-py-editor .cm-line,
-mpy-editor .cm-line,
-py-editor .cm-scroller,
-mpy-editor .cm-scroller,
-py-editor .cm-content *,
-mpy-editor .cm-content * {
+:is(py-editor, mpy-editor) .cm-content,
+:is(py-editor, mpy-editor) .cm-content * {
     color: #1f2328 !important;
 }
-
-py-editor .cm-gutters,
-mpy-editor .cm-gutters,
-py-editor .cm-lineNumbers,
-mpy-editor .cm-lineNumbers {
+:is(py-editor, mpy-editor) :is(.cm-gutters, .cm-lineNumbers) {
     display: none !important;
     background: transparent !important;
     border: 0 !important;
 }
 
-/* Quiz-Seite in der Summary nur als versteckten technischen Eintrag nutzen. */
+/* Quiz-Seite in Sidebar verstecken (nur technischer Summary-Eintrag) */
 #sidebar li:has(a[href$="werte_und_ausdruecke_aufgaben.html"]) {
     display: none !important;
 }

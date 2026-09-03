@@ -1,127 +1,112 @@
-// Leichtgewichtiger "Ausführen"-Button fuer einfache ```python-Codebloecke.
-// Ergaenzt PyScript (<script type="py-editor">), das fuer die interaktiven
-// Editoren in Kapitel 3 verwendet wird. Hier wird ein eigener, schlanker
-// Pyodide-Interpreter genutzt, der erst beim ersten Klick geladen wird.
+// "Ausführen"-Button für ```python-Blöcke mit .py-execute.
+// Lädt Pyodide erst beim ersten Klick (lazy), ergänzt die PyScript-Editoren.
 (() => {
+  const BASE = 'https://cdn.jsdelivr.net/pyodide/v0.26.0/full/';
+  let pyodideP = null;
+  let scriptP = null;
+
   const el = (tag, props) => Object.assign(document.createElement(tag), props);
 
-  // Pyodide wird erst beim ersten Klick nachgeladen (kein <script> in head.hbs),
-  // damit Seiten ohne py-execute gar nichts laden.
-  const PYODIDE_JS_URL = 'https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js';
-  const PYODIDE_INDEX_URL = 'https://cdn.jsdelivr.net/pyodide/v0.26.0/full/';
-  let pyodideReadyPromise = null;
-  let pyodideScriptPromise = null;
-
-  const ensurePyodideScript = () => {
-    if (window.loadPyodide) return Promise.resolve();
-    return (pyodideScriptPromise ??= new Promise((resolve, reject) => {
-      const s = document.createElement('script');
-      s.src = PYODIDE_JS_URL;
-      s.onload = () => resolve();
-      s.onerror = () => {
-        pyodideScriptPromise = null;
-        reject(new Error('Pyodide konnte nicht geladen werden.'));
-      };
-      document.head.append(s);
+  const loadPyodide = async () => {
+    if (!window.loadPyodide) {
+      scriptP ??= new Promise((resolve, reject) => {
+        const s = el('script', { src: `${BASE}pyodide.js` });
+        s.onload = resolve;
+        s.onerror = () => {
+          scriptP = null;
+          reject(new Error('Pyodide konnte nicht geladen werden.'));
+        };
+        document.head.append(s);
+      });
+      await scriptP;
+    }
+    return (pyodideP ??= window.loadPyodide({ indexURL: BASE }).catch((e) => {
+      pyodideP = null;
+      throw e;
     }));
   };
 
-  const getPyodide = async () => {
-    await ensurePyodideScript();
-    return (pyodideReadyPromise ??= window.loadPyodide({ indexURL: PYODIDE_INDEX_URL }).catch((error) => {
-      pyodideReadyPromise = null;
-      throw error;
-    }));
-  };
-
-  function rehighlight(block) {
+  const rehighlight = (block) => {
     const hljs = window.hljs;
     if (!hljs) return;
-    delete block.dataset.highlighted; // hljs highlightet pro Element sonst nur einmal
+    delete block.dataset.highlighted;
     (hljs.highlightElement ?? hljs.highlightBlock)?.call(hljs, block);
-  }
+  };
 
-  // Pyodide haengt bei Fehlern den kompletten internen Trace
-  // (_pyodide/_base.py, eval_code_async, …) vor die eigentliche Meldung.
-  // Wir zeigen nur noch den Teil ab dem Nutzer-Code an (File "<exec>").
-  function simplifyTraceback(error) {
-    const message = String(error);
-    const idx = message.indexOf('File "<exec>"');
-    return (idx === -1 ? message : message.slice(idx)).trim();
-  }
+  // Nur Nutzer-Code ab File "<exec>" zeigen, internen Pyodide-Trace abschneiden.
+  const cleanError = (err) => {
+    const msg = String(err);
+    const i = msg.indexOf('File "<exec>"');
+    return (i < 0 ? msg : msg.slice(i)).trim();
+  };
 
-  function formatResult(pyodide, value) {
-  if (typeof value !== 'string') return value;
-  const repr = pyodide.pyimport('builtins.repr');
-  try {
-    return repr(value);
-  } finally {
-    repr.destroy();
-  }
-}
-
-  async function runCode(block, runBtn, output) {
-    if (runBtn.dataset.running === 'true') return;
-
-    runBtn.dataset.running = 'true';
-    runBtn.disabled = true;
-    output.style.display = 'block';
-    output.classList.remove('py-output-error');
-    output.textContent = 'Lädt Python-Umgebung …';
-
+  // Python-Strings mit repr() darstellen (Anführungszeichen), Rest direkt.
+  const toDisplay = (pyodide, value) => {
+    if (typeof value !== 'string') return value;
+    const repr = pyodide.pyimport('builtins.repr');
     try {
-      const pyodide = await getPyodide();
-      const lines = [];
-      const capture = { batched: (text) => lines.push(text) };
-      pyodide.setStdout(capture);
-      pyodide.setStderr(capture);
-      pyodide.setStdin({
-  stdin: () => prompt('Eingabe für input:'),
-});
-
-      output.textContent = 'Berechne …';
-      // Pyodide gibt den Wert des letzten Ausdrucks automatisch zurueck (REPL-Verhalten von eval_code).
-      const result = await pyodide.runPythonAsync(block.textContent || '');
-      if (result != null) lines.push(formatResult(pyodide, result));
-
-      output.textContent = lines.join('\n');
-    } catch (error) {
-      output.classList.add('py-output-error');
-      output.textContent = simplifyTraceback(error);
+      return repr(value);
     } finally {
-      runBtn.dataset.running = 'false';
-      runBtn.disabled = false;
+      repr.destroy();
+    }
+  };
+
+  async function run(block, btn, out) {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    out.hidden = false;
+    out.classList.remove('py-output-error');
+    out.textContent = 'Lädt Python-Umgebung …';
+    try {
+      const pyodide = await loadPyodide();
+      const lines = [];
+      const io = { batched: (t) => lines.push(t) };
+      pyodide.setStdout(io);
+      pyodide.setStderr(io);
+      pyodide.setStdin({ stdin: () => prompt('Eingabe für input:') ?? '' });
+
+      out.textContent = 'Berechne …';
+      const result = await pyodide.runPythonAsync(block.textContent || '');
+      if (result != null) lines.push(toDisplay(pyodide, result));
+      out.textContent = lines.join('\n');
+    } catch (e) {
+      out.classList.add('py-output-error');
+      out.textContent = cleanError(e);
+    } finally {
+      btn.disabled = false;
     }
   }
 
-  function createRunner(block) {
+  function enhance(block) {
     const pre = block.parentElement;
-
-    block.setAttribute('contenteditable', 'true');
-    block.setAttribute('spellcheck', 'false');
+    block.contentEditable = 'true';
+    block.spellcheck = false;
     block.setAttribute('autocorrect', 'off');
     block.setAttribute('autocapitalize', 'off');
     block.addEventListener('blur', () => rehighlight(block));
 
-    let buttons = pre.querySelector('.buttons');
-    if (!buttons) pre.prepend(buttons = el('div', { className: 'buttons' }));
+    let bar = pre.querySelector('.buttons');
+    if (!bar) {
+      bar = el('div', { className: 'buttons' });
+      pre.prepend(bar);
+    }
 
-    const runBtn = el('button', {
+    const btn = el('button', {
       type: 'button',
       className: 'py-play-btn',
       title: 'Ausführen',
       innerHTML: document.getElementById('fa-play')?.innerHTML ?? '▶',
     });
-    runBtn.setAttribute('aria-label', 'Ausführen');
-    buttons.prepend(runBtn);
+    btn.setAttribute('aria-label', 'Ausführen');
+    bar.prepend(btn);
 
-    const output = el('div', { className: 'py-output' });
-    pre.after(output);
+    const out = el('div', { className: 'py-output', hidden: true });
+    pre.after(out);
 
-    runBtn.addEventListener('click', () => runCode(block, runBtn, output));
+    btn.addEventListener('click', () => run(block, btn, out));
   }
 
-  const start = () => document.querySelectorAll('code.language-python.py-execute').forEach(createRunner);
+  const start = () => document.querySelectorAll('code.language-python.py-execute').forEach(enhance);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 })();
